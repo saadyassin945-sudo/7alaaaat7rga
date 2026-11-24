@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>Critical Care & Emergency Nursing QBank</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg1:#0a0f1f;--bg2:#0a0f1f;--bg3:#0a0f1f;--primary:#4fc3f7;--primary-dark:#0288d1;--accent:#ffd54f;--danger:#ef5350;--success:#66bb6a;--text:#e2e8f0;--muted:#a0aec0;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,0.4);--glow:0 0 25px rgba(79,195,247,0.12);--max-width:600px;--bg-card:rgba(255,255,255,0.06);--border-card:rgba(255,255,255,0.06)}
+body.light{--bg1:#fff;--bg2:#fff;--bg3:#fff;--bg-card:#fff;--border-card:#ccc;--text:#000;--muted:#555;--primary:#1565c0;--primary-dark:#0d47a1;--accent:#f9a825;--danger:#c62828;--success:#2e7d32;--shadow:0 2px 8px rgba(0,0,0,0.08);--glow:none;background:#fff!important;background-image:none!important;animation:none!important}
+body{font-family:"Tahoma","Segoe UI","Cairo",sans-serif;background:var(--bg1);min-height:100vh;color:var(--text);display:flex;flex-direction:column;align-items:center;padding:12px 10px;transition:background .4s,color .3s}
+.app{width:100%;max-width:var(--max-width);position:relative;z-index:1}
+.top-header{text-align:center;padding:8px 0 4px}
+.top-header h1{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body.light .top-header h1{background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;color:#000;text-shadow:none}
+.top-header .sub{font-size:.9rem;color:var(--primary);font-weight:600}
+.top-header .creator{font-size:.7rem;color:var(--muted);margin-top:4px}
+.top-header .creator .name{color:var(--text);font-weight:700}
+body.light .top-header .creator .name{color:#000}
+.theme-toggle-wrap{display:flex;justify-content:flex-end;margin-bottom:6px}
+.theme-toggle{display:flex;background:var(--bg-card);border:1px solid var(--border-card);border-radius:30px;padding:3px;gap:2px}
+.theme-toggle button{background:transparent;border:none;padding:4px 14px;border-radius:30px;font-size:.8rem;color:var(--muted);cursor:pointer;transition:.3s}
+.theme-toggle button.active{background:var(--primary);color:#fff;font-weight:700}
+body.light .theme-toggle button.active{background:#1565c0;color:#fff}
+.card{background:var(--bg-card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border-card);border-radius:var(--radius);box-shadow:var(--shadow),var(--glow);padding:16px 14px;margin-bottom:14px;transition:transform .2s,background .3s,border .3s;color:var(--text)}
+body.light .card{background:#fff;border:1px solid #ccc;backdrop-filter:none}
+.card-title{margin:0 0 12px;font-size:1rem;border-inline-start:3px solid var(--primary);padding-inline-start:10px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.card-title i{color:var(--accent);margin-left:6px}
+.card-title .select-all-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--muted);border-radius:12px;padding:2px 12px;font-size:.7rem;cursor:pointer;transition:.2s;font-weight:600}
+body.light .card-title .select-all-btn{background:#f0f0f0;border-color:#ccc;color:#333}
+.card-title .select-all-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.action-icons{display:flex;justify-content:space-around;gap:6px;flex-wrap:wrap}
+.action-icon{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:6px 14px;border-radius:12px;border:1.5px solid transparent;background:transparent;color:var(--muted);font-size:.7rem;font-weight:600;min-width:56px}
+.action-icon .icon{font-size:1.5rem}
+.action-icon .label{font-size:.55rem}
+.action-icon.active{border-color:var(--primary);background:rgba(79,195,247,0.08)}
+body.light .action-icon.active{border-color:#1565c0;background:#e3f2fd}
+.sub-options{display:none;padding:8px 10px;margin-top:6px;background:rgba(0,0,0,0.15);border-radius:12px;border:1px solid var(--border-card);flex-wrap:wrap;gap:6px;justify-content:center}
+body.light .sub-options{background:#f5f5f5;border-color:#ccc}
+.sub-options.show{display:flex}
+.sub-options .action-btn{border:1px solid var(--border-card);background:rgba(255,255,255,0.03);border-radius:12px;padding:5px 16px;font-size:.75rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+body.light .sub-options .action-btn{background:#fff;border-color:#ccc;color:#333}
+.sub-options .action-btn.active{border-color:var(--primary);background:rgba(79,195,247,0.12);color:var(--text)}
+body.light .sub-options .action-btn.active{border-color:#1565c0;background:#bbdefb;color:#000}
+.section-list{display:flex;flex-direction:column;gap:6px;max-height:320px;overflow-y:auto}
+.section-item{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border-card);border-radius:10px;padding:10px 12px;cursor:pointer;transition:all .15s;font-size:.85rem;color:var(--text);gap:8px}
+body.light .section-item{border-color:#ccc}
+.section-item.active{border-color:var(--primary);background:rgba(79,195,247,0.08)}
+body.light .section-item.active{border-color:#1565c0;background:#e3f2fd}
+.section-item .sec-title{flex:1;text-align:right;font-weight:600;line-height:1.4}
+.section-item .cnt{background:rgba(255,255,255,0.06);border-radius:30px;padding:2px 10px;font-size:.72rem;color:var(--muted);font-weight:700;min-width:36px;text-align:center}
+body.light .section-item .cnt{background:#ddd;color:#333}
+.section-item .info-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:0 4px}
+.section-item .info-btn:hover{color:var(--primary)}
+#section-explanation{margin-top:12px;padding:16px;background:rgba(0,0,0,0.15);border-radius:var(--radius);border:1px solid var(--border-card);display:none}
+body.light #section-explanation{background:#f5f5f5;border-color:#ccc}
+#section-explanation.show{display:block}
+.explain-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.explain-controls{display:flex;gap:6px;align-items:center}
+.explain-controls .lang-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--muted);padding:4px 10px;border-radius:20px;font-size:.7rem;cursor:pointer;font-weight:600}
+body.light .explain-controls .lang-btn{background:#fff;border-color:#ccc;color:#333}
+.explain-controls .lang-btn.active{border-color:var(--primary);background:rgba(79,195,247,0.12);color:var(--text)}
+body.light .explain-controls .lang-btn.active{border-color:#1565c0;background:#bbdefb;color:#000}
+.explain-controls .close-explain{background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer}
+.explain-controls .close-explain:hover{color:var(--danger)}
+#explain-text{font-size:.9rem;line-height:2;color:var(--text);background:rgba(0,0,0,0.1);padding:12px;border-radius:10px;min-height:60px;white-space:pre-wrap}
+#explain-text.en{direction:ltr;text-align:left}
+#explain-text.ar{direction:rtl;text-align:right}
+body.light #explain-text{background:#fff;color:#000;border:1px solid #ccc}
+.big-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(79,195,247,0.25);transition:all .15s;position:relative;overflow:hidden;margin-bottom:14px}
+body.light .big-btn{background:#1565c0;color:#fff;box-shadow:0 2px 8px rgba(21,101,192,0.3)}
+.big-btn.secondary{background:linear-gradient(135deg,#4a5568,#2d3748)}
+body.light .big-btn.secondary{background:#757575}
+.big-btn.warn{background:linear-gradient(135deg,var(--accent),#f57f17)}
+body.light .big-btn.warn{background:#f9a825;color:#000}
+.big-btn:disabled{opacity:.5;cursor:not-allowed}
+.stats-row{display:flex;justify-content:space-around;gap:8px;text-align:center;margin:6px 0}
+.stats-row .stat .num{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,var(--primary),#81d4fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body.light .stats-row .stat .num{background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;color:#000}
+.stats-row .stat .lbl{font-size:.7rem;color:var(--muted)}
+.progress-stats{display:flex;align-items:center;gap:16px}
+.progress-ring{position:relative;width:70px;height:70px;flex-shrink:0}
+.progress-ring svg{transform:rotate(-90deg);width:70px;height:70px}
+.progress-ring .bg{fill:none;stroke:var(--border-card);stroke-width:6}
+body.light .progress-ring .bg{stroke:#ccc}
+.progress-ring .fg{fill:none;stroke:var(--primary);stroke-width:6;stroke-linecap:round;stroke-dasharray:176;stroke-dashoffset:176;transition:stroke-dashoffset .6s}
+body.light .progress-ring .fg{stroke:#1565c0}
+.progress-ring .center-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;color:var(--text)}
+.weak-link{margin-top:10px;font-size:.75rem;color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:6px}
+.weak-link i{color:var(--accent)}
+.action-row-bottom{display:flex;gap:8px;margin-top:10px}
+.action-row-bottom .big-btn{flex:1;font-size:.75rem;padding:8px;margin-top:0;margin-bottom:0}
+#screen-quiz,#screen-results{display:none}
+#screen-quiz.active,#screen-results.active{display:block}
+.quiz-meta{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted);margin-bottom:8px}
+#timer-badge{font-weight:600;font-size:.8rem;background:rgba(255,255,255,0.05);padding:2px 12px;border-radius:30px;border:1px solid var(--border-card)}
+body.light #timer-badge{background:#f0f0f0;border-color:#ccc}
+#timer-badge.warn{background:rgba(255,213,79,0.15);border-color:var(--accent);color:var(--accent)}
+#timer-badge.danger{background:rgba(239,83,80,0.2);border-color:var(--danger);color:var(--danger);animation:pulse .7s infinite alternate}
+@keyframes pulse{0%{opacity:1}100%{opacity:.5}}
+.progress-wrap{background:rgba(255,255,255,0.06);border-radius:30px;height:4px;overflow:hidden;margin-bottom:12px}
+body.light .progress-wrap{background:#ddd}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:0%;transition:width .3s}
+body.light .progress-bar{background:linear-gradient(90deg,#1565c0,#f9a825)}
+.grid-toggle-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:var(--primary);padding:3px 10px;border-radius:20px;font-size:.75rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-weight:600;transition:.2s}
+body.light .grid-toggle-btn{background:#e0f7fa;border-color:#b2ebf2;color:#0077a3}
+.grid-toggle-btn:hover{background:rgba(0,212,255,0.15)}
+#questions-grid-container{margin-bottom:12px;padding:12px;background:rgba(0,0,0,0.2);border-radius:12px;border:1px solid var(--border-card);display:none}
+body.light #questions-grid-container{background:#f8fafc;border-color:#ddd}
+#questions-grid-container.show{display:block}
+.grid-title{font-size:.75rem;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(36px,1fr));gap:6px;max-height:160px;overflow-y:auto;padding-right:2px}
+.grid-btn{width:100%;height:34px;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:.8rem;font-weight:700;border:1px solid var(--border-card);background:rgba(255,255,255,0.03);color:var(--muted);cursor:pointer;transition:all .15s}
+body.light .grid-btn{background:#fff;border-color:#ccc;color:#333}
+.grid-btn:hover{border-color:var(--primary);color:var(--primary)}
+.grid-btn.current{border:2px solid var(--primary)!important;box-shadow:0 0 10px rgba(0,212,255,0.4);font-weight:900}
+.grid-btn.answered-correct{background:rgba(52,211,153,0.15)!important;border-color:var(--success)!important;color:var(--success)!important}
+body.light .grid-btn.answered-correct{background:#e8f5e9!important;border-color:#2e7d32!important;color:#2e7d32!important}
+.grid-btn.answered-wrong{background:rgba(239,83,80,0.15)!important;border-color:var(--danger)!important;color:var(--danger)!important}
+body.light .grid-btn.answered-wrong{background:#ffebee!important;border-color:#c62828!important;color:#c62828!important}
+.q-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.q-tag{display:inline-block;background:rgba(79,195,247,0.10);color:var(--primary);font-size:.65rem;font-weight:700;padding:2px 12px;border-radius:30px;border:1px solid rgba(79,195,247,0.06)}
+body.light .q-tag{background:#e3f2fd;color:#1565c0;border-color:#bbdefb}
+.q-en{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.6;direction:ltr;text-align:left;word-wrap:break-word}
+.q-ar{font-size:.9rem;color:var(--muted);margin-bottom:14px;line-height:1.7;direction:rtl;text-align:right;word-wrap:break-word}
+.options{display:flex;flex-direction:column;gap:8px}
+.option{display:flex;align-items:center;gap:8px;border:1px solid var(--border-card);border-radius:12px;padding:10px 14px;cursor:pointer;transition:all .15s;background:rgba(255,255,255,0.02);direction:ltr}
+body.light .option{background:#fff;border-color:#ccc}
+.option .opt-en{font-weight:600;color:var(--text);font-size:.9rem;flex:1;direction:ltr;text-align:left}
+.option .opt-ar{color:var(--muted);font-size:.8rem;direction:rtl;text-align:right;flex:1}
+.option .mark{font-size:1.1rem;width:24px;text-align:center;flex-shrink:0}
+.option.selected{border-color:var(--primary);background:rgba(79,195,247,0.06)}
+body.light .option.selected{border-color:#1565c0;background:#e3f2fd}
+.option.correct{border-color:var(--success);background:rgba(102,187,106,0.08)}
+body.light .option.correct{border-color:#2e7d32;background:#e8f5e9}
+.option.wrong{border-color:var(--danger);background:rgba(239,83,80,0.08)}
+body.light .option.wrong{border-color:#c62828;background:#ffebee}
+.option.disabled{cursor:default;opacity:.8}
+.feedback-box{margin-top:12px;padding:12px;border-radius:12px;font-size:.85rem;line-height:1.6}
+.feedback-box.correct{background:rgba(102,187,106,0.08);border:1px solid rgba(102,187,106,0.15);color:#a7f3d0}
+body.light .feedback-box.correct{background:#e8f5e9;border-color:#2e7d32;color:#000}
+.feedback-box.wrong{background:rgba(239,83,80,0.08);border:1px solid rgba(239,83,80,0.15);color:#fecaca}
+body.light .feedback-box.wrong{background:#ffebee;border-color:#c62828;color:#000}
+.feedback-box .fb-title{font-weight:700;margin-bottom:4px}
+.nav-row{display:flex;gap:8px;margin-top:12px}
+.nav-row .big-btn{flex:1;margin-top:0;margin-bottom:0;font-size:.85rem;padding:10px}
+.score-circle{width:120px;height:120px;border-radius:50%;margin:8px auto 14px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:conic-gradient(var(--primary) calc(var(--pct)*1%),rgba(255,255,255,0.04) 0);position:relative}
+body.light .score-circle{background:conic-gradient(#1565c0 calc(var(--pct)*1%),#e0e0e0 0)}
+.score-circle::before{content:"";position:absolute;width:90px;height:90px;background:var(--bg1);backdrop-filter:blur(4px);border-radius:50%;opacity:.85}
+body.light .score-circle::before{background:#fff;opacity:.9}
+.score-circle .pct{position:relative;font-size:1.8rem;font-weight:900;color:#fff}
+body.light .score-circle .pct{color:#000}
+.score-circle .lbl{position:relative;font-size:.7rem;color:var(--muted)}
+.mistake-item{border:1px solid var(--border-card);border-radius:12px;padding:12px;margin-bottom:10px;background:rgba(255,255,255,0.02)}
+body.light .mistake-item{background:#fff;border-color:#ccc}
+.mistake-item .m-q{font-weight:700;margin-bottom:2px;direction:ltr;text-align:left}
+.mistake-item .m-you{color:var(--danger);font-size:.8rem}
+body.light .mistake-item .m-you{color:#c62828}
+.mistake-item .m-correct{color:var(--success);font-size:.8rem}
+body.light .mistake-item .m-correct{color:#2e7d32}
+.mistake-toggle{background:none;border:1px solid var(--border-card);border-radius:8px;padding:4px 12px;cursor:pointer;color:var(--text);font-size:.75rem;margin-top:6px}
+body.light .mistake-toggle{border-color:#ccc;color:#000}
+.mistake-detail{margin-top:10px;border:1px solid var(--border-card);border-radius:10px;padding:12px;background:rgba(255,255,255,0.03);direction:ltr;text-align:left}
+body.light .mistake-detail{background:#f9f9f9;border-color:#ccc}
+.mistake-detail .opt-row{display:flex;align-items:center;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border-card)}
+body.light .mistake-detail .opt-row{border-color:#ddd}
+.mistake-detail .opt-row:last-child{border-bottom:none}
+.mistake-detail .opt-label{flex:1}
+.mistake-detail .opt-status{font-size:1rem;margin-left:8px}
+.hidden{display:none!important}
+footer{text-align:center;color:var(--muted);font-size:.7rem;margin-top:20px;margin-bottom:8px;opacity:.6}
+footer .name{color:var(--primary);font-weight:700}
+body.light footer .name{color:#1565c0}
+.word-en{display:inline-block;cursor:default;transition:background .15s,transform .1s;padding:1px 2px;border-radius:4px;direction:ltr}
+.word-en:active{background:rgba(79,195,247,0.15);transform:scale(.97)}
+body.light .word-en:active{background:#bbdefb}
+.word-en.speaking{background:rgba(255,213,79,0.25);box-shadow:0 0 10px rgba(255,213,79,0.2)}
+body.light .word-en.speaking{background:#fff9c4}
+.speech-hint{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);color:#fff;padding:6px 18px;border-radius:30px;font-size:.8rem;pointer-events:none;opacity:0;transition:opacity .3s;z-index:999;border:1px solid rgba(255,255,255,0.1)}
+body.light .speech-hint{background:#f0f0f0;color:#000;border-color:#ccc}
+.speech-hint.show{opacity:1}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.25);transform:scale(0);animation:rippleAnim .5s linear;pointer-events:none}
+body.light .ripple{background:rgba(0,0,0,0.1)}
+@keyframes rippleAnim{to{transform:scale(3);opacity:0}}
+@media(max-width:480px){body{padding:8px 6px}.app{max-width:100%}.top-header h1{font-size:1.5rem}.card{padding:12px 10px}.action-icon{padding:4px 8px;min-width:44px}.action-icon .icon{font-size:1.2rem}.q-en{font-size:.9rem}.q-ar{font-size:.8rem}.option{padding:8px 10px}.big-btn{font-size:.85rem;padding:10px}.score-circle{width:100px;height:100px}.score-circle::before{width:75px;height:75px}.score-circle .pct{font-size:1.5rem}.progress-ring{width:56px;height:56px}.progress-ring svg{width:56px;height:56px}}
+.tf-badge{display:inline-block;font-size:.6rem;font-weight:700;padding:1px 8px;border-radius:12px;margin-right:6px;background:rgba(79,195,247,0.15);color:var(--primary)}
+body.light .tf-badge{background:#e3f2fd;color:#1565c0}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top-header"><h1> استعِن باللَّهِ ولا تعجِزْ ♥️ </h1><div class="sub">Critical Care & Emergency Nursing</div><div class="creator"><i class="fas fa-user-nurse"></i> Created by <span class="name">MR. YASSIN THARWAT</span></div></div>
+<div class="theme-toggle-wrap"><div class="theme-toggle" id="themeToggle"><button class="active" data-theme="dark" onclick="setTheme('dark')"><i class="fas fa-moon"></i></button><button data-theme="light" onclick="setTheme('light')"><i class="fas fa-sun"></i></button></div></div>
+
+<div id="main-screen">
+<div class="card"><div class="card-title"><i class="fas fa-sliders-h"></i> الإجراءات</div>
+<div class="action-icons">
+<div class="action-icon active" data-target="modeOptions" onclick="toggleOptions('modeOptions')"><span class="icon">🎯</span><span class="label">المذاكرة</span></div>
+<div class="action-icon" data-target="orderOptions" onclick="toggleOptions('orderOptions')"><span class="icon">🔀</span><span class="label">الترتيب</span></div>
+<div class="action-icon" data-target="langOptions" onclick="toggleOptions('langOptions')"><span class="icon">🌐</span><span class="label">اللغة</span></div>
+<div class="action-icon" data-target="timerOptions" onclick="toggleOptions('timerOptions')"><span class="icon">⏱️</span><span class="label">المؤقت</span></div>
+</div>
+<div id="modeOptions" class="sub-options show"><button class="action-btn active" data-mode="practice" onclick="selectMode('practice')">تدريب</button><button class="action-btn" data-mode="test" onclick="selectMode('test')">اختبار</button></div>
+<div id="orderOptions" class="sub-options"><button class="action-btn active" data-order="device" onclick="selectOrder('device')">بالترتيب</button><button class="action-btn" data-order="random" onclick="selectOrder('random')">عشوائي</button></div>
+<div id="langOptions" class="sub-options"><button class="action-btn active" data-translate="yes" onclick="selectTranslate('yes')">ترجمة</button><button class="action-btn" data-translate="no" onclick="selectTranslate('no')">EN</button></div>
+<div id="timerOptions" class="sub-options"><button class="action-btn active" data-timer="0" onclick="selectTimer(0)">تثبيت</button><button class="action-btn" data-timer="5" onclick="selectTimer(5)">5s</button><button class="action-btn" data-timer="10" onclick="selectTimer(10)">10s</button></div>
+</div>
+
+<div class="card"><div class="card-title"><span><i class="fas fa-layer-group"></i> الموضوعات المختارة</span><button class="select-all-btn" id="selectAllBtn" onclick="toggleAllSections()">إلغاء الكل</button></div><div id="section-list" class="section-list"></div>
+<div id="section-explanation"><div class="explain-header"><h3 id="explain-title"></h3><div class="explain-controls"><button class="lang-btn active" data-lang="ar" onclick="setExplainLang('ar')">🇪🇬 عربي</button><button class="lang-btn" data-lang="en" onclick="setExplainLang('en')">🇬🇧 English</button><button class="close-explain" onclick="closeExplanation()"><i class="fas fa-times"></i></button></div></div><div id="explain-text" class="ar"></div></div></div>
+
+<button class="big-btn" onclick="startQuiz()"><i class="fas fa-play"></i> ابدأ المذاكرة</button>
+
+<div class="card" id="progressCard"><div class="card-title"><i class="fas fa-chart-line"></i> تقدمك</div>
+<div class="progress-stats"><div class="progress-ring"><svg viewBox="0 0 70 70"><circle class="bg" cx="35" cy="35" r="28"/><circle class="fg" id="progressCircle" cx="35" cy="35" r="28" stroke-dashoffset="176"/></svg><div class="center-text" id="progressPercent">0<small>%</small></div></div>
+<div class="stats-row" style="flex:1;margin:0;"><div class="stat"><div class="num" id="statAttempted">0</div><div class="lbl">تم حله</div></div><div class="stat"><div class="num" id="statCorrect">0</div><div class="lbl">صح</div></div><div class="stat"><div class="num" id="statWrong">0</div><div class="lbl">غلط</div></div></div></div>
+<div class="weak-link" id="weakLink" onclick="startWeakSectionQuiz()"><i class="fas fa-lightbulb"></i> أضعف نقطة: <span id="weakSectionName">-</span> (<span id="weakSectionRate">0%</span>)</div>
+<div class="action-row-bottom"><button class="big-btn warn" onclick="reviewMistakes()"><i class="fas fa-undo-alt"></i> راجع أخطائي</button><button class="big-btn secondary" onclick="resetProgress()"><i class="fas fa-trash-alt"></i> تصفير</button></div></div>
+</div>
+
+<div id="screen-quiz">
+<div class="quiz-meta">
+  <span id="quiz-position"><i class="fas fa-question-circle"></i> 1 / 10</span>
+  <span id="timer-badge" class="hidden"><i class="fas fa-hourglass-half"></i> 30</span>
+  <span id="quiz-score"><i class="fas fa-check-circle" style="color:var(--success);"></i> 0 <i class="fas fa-times-circle" style="color:var(--danger);margin-right:6px;"></i> 0</span>
+</div>
+<div class="progress-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+
+<div id="questions-grid-container">
+  <div class="grid-title">
+    <span><i class="fas fa-th"></i> انتقل مباشرة لأي سؤال:</span>
+    <span style="font-size:0.65rem; color:var(--muted);"><span style="color:var(--success);">صح</span> | <span style="color:var(--danger);">غلط</span></span>
+  </div>
+  <div class="q-grid" id="q-grid-buttons"></div>
+</div>
+
+<div class="card">
+  <div class="q-header">
+    <div class="q-tag" id="q-section-tag"><i class="fas fa-tag"></i> الموضوع</div>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <button class="grid-toggle-btn" id="btn-toggle-trans" onclick="toggleQuizTranslation()"><i class="fas fa-language"></i> ترجمة</button>
+      <button class="grid-toggle-btn" id="btn-toggle-grid" onclick="toggleQuestionsGrid()"><i class="fas fa-th-large"></i> شبكة الأسئلة</button>
+    </div>
+  </div>
+  <div class="q-en" id="q-en"></div>
+  <div class="q-ar" id="q-ar"></div>
+  <div class="options" id="options"></div>
+  <div id="feedback" class="feedback-box hidden"></div>
+  <div class="nav-row">
+    <button class="big-btn secondary" id="btn-quit" onclick="quitQuiz()" style="flex:0 0 60px;"><i class="fas fa-sign-out-alt"></i></button>
+    <button class="big-btn secondary" id="btn-prev" onclick="previousQuestion()" disabled><i class="fas fa-arrow-right"></i></button>
+    <button class="big-btn" id="btn-next" onclick="nextQuestion()" disabled><i class="fas fa-arrow-left"></i> التالي</button>
+  </div>
+</div>
+</div>
+
+<div id="screen-results"><div class="card" style="text-align:center;"><div class="card-title" style="border:none;text-align:center;padding:0;"><i class="fas fa-trophy" style="color:var(--accent);"></i> نتيجتك</div><div class="score-circle" id="score-circle" style="--pct:0;"><div class="pct" id="result-pct">0%</div><div class="lbl">النسبة</div></div><div class="stats-row"><div class="stat"><div class="num" id="res-total">0</div><div class="lbl">إجمالي</div></div><div class="stat"><div class="num" id="res-correct" style="color:var(--success);">0</div><div class="lbl">صح</div></div><div class="stat"><div class="num" id="res-wrong" style="color:var(--danger);">0</div><div class="lbl">غلط</div></div></div><button class="big-btn" onclick="goHome()"><i class="fas fa-home"></i> الرئيسية</button><button class="big-btn warn hidden" id="btn-show-mistakes" onclick="showMistakesList()"><i class="fas fa-list-ul"></i> الأخطاء</button></div><div id="mistakes-list-wrap" class="card hidden"><div class="card-title"><i class="fas fa-exclamation-triangle" style="color:var(--danger);"></i> أخطائك</div><div id="mistakes-list"></div></div></div>
+
+<div id="speech-hint" class="speech-hint"><i class="fas fa-volume-up"></i> جارٍ النطق...</div>
+<footer>Created by <span class="name">MR. YASSIN THARWAT</span></footer>
+</div>
+
+<script>
+var L_PFX=["A) ","B) ","C) ","D) "];
+function M(en,opts,c,ex){return{en:en,options:opts.map(function(t,i){return{en:L_PFX[i]+t,correct:i===c}}),explain_ar:ex}}
+function T(en,tr,ex){return{en:en,options:[{en:"True",ar:"صواب",correct:!!tr},{en:"False",ar:"خطأ",correct:!tr}],explain_ar:ex||(tr?"صح.":"خطأ.")}}
+
+const ORIGINAL_BANK=[
+{
+name:"الموضوع 1: Acid-Base Balance",
+nameEn:"الموضوع الأول - Topic 1: Acid-Base Balance",
+questions:[
+M("Acids are substances that can:",["Release hydrogen ions (H+)","Accept hydrogen ions","Release bicarbonate only","Neutralize all ions"],0,"الحمض يطلق أيونات الهيدروجين."),
+M("A base (alkali) is a substance that can:",["Produce CO2","Accept (buffer) hydrogen ions","Release many H+","Release hydrogen ions"],1,"القاعدة تستقبل أيونات الهيدروجين."),
+M("Which is an example of a strong acid?",["Hydrochloric acid","Phosphate","Bicarbonate","Carbonic acid"],0,"حمض الهيدروكلوريك."),
+M("Carbonic acid is classified as a:",["Base","Neutral salt","Strong acid","Weak acid releasing few hydrogen ions"],3,"حمض ضعيف."),
+M("Which anion buffers hydrogen ions in the blood?",["Calcium","Bicarbonate (HCO3-)","Potassium","Sodium"],1,"البيكربونات."),
+M("The chemically neutral pH is:",["7.4","14","7","0"],2,"7."),
+M("Normal arterial blood pH is:",["7.5 to 7.8","7.35 to 7.45","7.0 to 7.2","6.8 to 7.0"],1,"7.35–7.45."),
+M("A blood pH of 7.30 is:",["Alkalotic","Normal","Acidotic","Neutral"],2,"حامضي (أقل من 7.35)."),
+M("A blood pH of 7.52 is:",["Acidotic","Neutral","Normal","Alkalotic"],3,"قلوي (أكثر من 7.45)."),
+M("Arterial pH below 7.0 usually leads to:",["Coma and death","Hypertension","No change","Convulsions"],0,"غيبوبة ووفاة."),
+M("Arterial pH above 7.8 causes:",["Coma","No effect","Hypotension only","Overstimulation of the nervous system, convulsions and respiratory arrest"],3,"فرط تنبيه الجهاز العصبي وتشنجات."),
+M("Acid-base balance is controlled by:",["Respiratory and metabolic (renal and buffer) functions","The liver only","The skin","The heart only"],0,"الوظائف التنفسية والأيضية."),
+M("Which are the buffers within cells?",["Bicarbonate only","Proteins and phosphates","Hemoglobin","Chloride"],1,"البروتينات والفوسفات."),
+M("Which is the buffer in red blood cells?",["Albumin","Chloride","Hemoglobin","Phosphate"],2,"الهيموجلوبين."),
+M("The combination of all buffer systems is called:",["Total buffer base","Anion gap","Renal regulation","Respiratory compensation"],0,"إجمالي قاعدة المنظمات."),
+M("Which mechanism corrects acid-base disturbances very quickly?",["Hepatic metabolism","Dietary changes","Respiratory regulation (hypo- or hyperventilation)","Renal regulation"],2,"التنفس."),
+M("Renal regulation of pH may take:",["One breath","Minutes","Seconds","Hours to days"],3,"ساعات إلى أيام."),
+M("When blood is too acidic, the kidneys:",["Retain H+","Excrete H+ ions in urine","Stop working","Excrete bicarbonate"],1,"تخرج أيونات الهيدروجين."),
+T("The respiratory system regulates acid-base balance by controlling CO2.",1),
+T("Renal regulation of pH is faster than respiratory regulation.",0,"خطأ؛ الكلى أبطأ."),
+T("A pH above 7.45 is acidotic.",0,"خطأ؛ هذا قلوي."),
+T("Arterial blood is normally slightly alkaline.",1,"صح؛ pH 7.35–7.45."),
+T("Proteins and phosphates are intracellular buffers.",1),
+T("The kidneys excrete bicarbonate when blood is too acidic.",0,"خطأ؛ يخرجون H+ عندما يكون الدم حامضياً."),
+T("A pH of 7 is chemically neutral.",1),
+T("Weak acids such as carbonic acid release many free hydrogen ions.",0,"خطأ؛ تطلق القليل."),
+T("Hemoglobin acts as a buffer in red blood cells.",1),
+T("A pH below 7.35 is called alkalotic.",0,"خطأ؛ حامضي."),
+M("Respiratory acidosis is characterized by:",["Low pH and low HCO3","High pH and low PaCO2","Low pH and high PaCO2 (> 45 mmHg)","High pH and high HCO3"],2,"انخفاض pH وارتفاع PaCO2."),
+M("The basic mechanism of respiratory acidosis is:",["CO2 retention by the lungs","Bicarbonate loss","Excess CO2 loss","Acid ingestion"],0,"احتباس ثاني أكسيد الكربون."),
+M("Which condition causes respiratory acidosis through a neuromuscular problem?",["Anxiety","Pneumonia","Fever","Guillain-Barre syndrome"],3,"متلازمة غيلان باريه."),
+M("Which is a neuromuscular cause?",["Diarrhea","Myasthenia gravis","Asthma","Sepsis"],1,"الوهن العضلي."),
+M("Which drug-related problem causes respiratory acidosis?",["Salicylate early toxicity","Antacids","Diuretics","Anesthesia or drug overdose depressing the respiratory center"],3,"تثبيط مركز التنفس."),
+M("Which lung disease may cause respiratory acidosis?",["Anxiety","Diabetic ketoacidosis","COPD","Salicylate poisoning"],2,"مرض الانسداد الرئوي المزمن."),
+M("Airway obstruction causing respiratory acidosis can result from:",["Diarrhea","Retained secretions, tumors or laryngeal spasm","Fever","Hyperventilation"],1,"إفرازات محتبسة أو أورام."),
+M("Which sign is expected in respiratory acidosis?",["Rapid shallow respirations and drowsiness","Tetany","Deep rapid Kussmaul breathing","Numbness and tingling"],0,"تنفس سريع سطحي ونعاس."),
+M("Which electrolyte disturbance accompanies respiratory acidosis?",["Hypocalcemia","Hypokalemia","Hyperkalemia","Hypomagnesemia"],2,"فرط البوتاسيوم."),
+M("A potassium level above ___ is expected in respiratory acidosis:",["3 mEq/L","3.5 mEq/L","2 mEq/L","5 mEq/L"],3,"أكثر من 5."),
+M("The first priority in managing respiratory acidosis is to:",["Give sedatives","Maintain a patent airway","Restrict fluids","Give IV bicarbonate"],1,"الحفاظ على مجرى الهواء."),
+M("Which medication opens constricted airways in respiratory acidosis?",["Bronchodilator","Laxative","Diuretic","Sedative"],0,"موسع شعبي."),
+M("Oxygen therapy in a COPD patient with respiratory acidosis requires caution because:",["It is ineffective","It causes alkalosis","It may worsen hypercapnia","It causes bleeding"],2,"قد يزيد احتباس CO2."),
+M("Which measure helps clear secretions in respiratory acidosis?",["Chest physiotherapy and postural drainage","Sedation","Fluid restriction","Bed rest only"],0,"علاج طبيعي للصدر."),
+M("A COPD patient is drowsy with RR 28 shallow, pH 7.28, PaCO2 62 mmHg. This ABG indicates:",["Metabolic alkalosis","Respiratory alkalosis","Metabolic acidosis","Respiratory acidosis"],3,"حماض تنفسي."),
+M("A patient with an opioid overdose has slow shallow respirations and ABG pH 7.25, PaCO2 70. The cause is:",["Renal failure","Respiratory center depression","Vomiting","Anxiety"],1,"تثبيط مركز التنفس."),
+T("Giving a bronchodilator is part of the management of respiratory acidosis.",1),
+T("Drowsiness and disorientation may occur in respiratory acidosis.",1),
+T("Oxygen should be given at high flow to all COPD patients without caution.",0,"خطأ؛ يجب الحذر لاحتمال زيادة CO2."),
+T("Respiratory acidosis is associated with hypokalemia.",0,"خطأ؛ فرط بوتاسيوم."),
+T("COPD, pneumonia and ARDS can cause respiratory acidosis.",1),
+T("Respiratory acidosis is managed by IV bicarbonate as first-line.",0,"خطأ؛ الأولوية لمجرى الهواء والتهوية."),
+T("Hyperventilation is the cause of respiratory acidosis.",0,"خطأ؛ نقص التهوية."),
+T("Respiratory acidosis involves a high PaCO2 and low pH.",1),
+M("Respiratory alkalosis is characterized by:",["Low HCO3 only","Low pH and high PaCO2","High HCO3","High pH and low PaCO2 (< 35 mmHg)"],3,"ارتفاع pH وانخفاض PaCO2."),
+M("It results from:",["Retained CO2","Hypoventilation","Alveolar hyperventilation","Renal failure"],2,"فرط التهوية السنخية."),
+M("Which is a cause of respiratory alkalosis?",["Drug overdose with sedatives","Anxiety, fear and pain","COPD","Guillain-Barre"],1,"القلق والخوف والألم."),
+M("Early salicylate intoxication causes:",["Respiratory alkalosis","No change","Respiratory acidosis","Metabolic alkalosis only"],0,"قلاء تنفسي."),
+M("Which hypermetabolic state causes respiratory alkalosis?",["Starvation","Fever, liver failure or early sepsis","Hypothermia","Diarrhea"],1,"الحمى وفشل الكبد."),
+M("Which sign is expected in respiratory alkalosis?",["Deep rapid breathing with numbness and tingling","Drowsiness","Fruity breath","Slow shallow breathing"],0,"تنفس عميق سريع وتنميل."),
+M("Which electrolyte changes occur in respiratory alkalosis?",["Hyperkalemia","Hypercalcemia","Hypernatremia","Hypokalemia, hypocalcemia and hypomagnesemia"],3,"نقص البوتاسيوم والكالسيوم والمغنيسيوم."),
+M("Which test is done for suspected salicylate poisoning?",["Urinalysis only","Sputum culture","Toxicology screening","Chest X-ray only"],2,"فحص سموم."),
+M("Which is a management for respiratory alkalosis caused by anxiety?",["Give a sedative or anxiolytic","Give bronchodilators","Restrict oxygen","Give IV bicarbonate"],0,"مهدئ."),
+M("If respiratory alkalosis is iatrogenic, the nurse should:",["Give diuretics","Adjust the ventilator settings","Give antibiotics","Give laxatives"],1,"ضبط إعدادات جهاز التنفس."),
+M("Which safety measure is needed in respiratory alkalosis?",["Isolation","Aspiration precautions only","Seizure precautions","Bed rest only"],2,"احتياطات التشنج."),
+M("A patient in panic has RR 34, tingling lips, ABG pH 7.56, PaCO2 25 mmHg. The best interpretation is:",["Metabolic acidosis","Respiratory acidosis","Normal","Respiratory alkalosis"],3,"قلاء تنفسي."),
+M("A ventilated patient develops pH 7.52 and PaCO2 28 mmHg after the rate was increased. The nurse should:",["Give sedation only","Give bicarbonate","Notify the provider and adjust ventilator settings","Increase oxygen"],2,"ضبط إعدادات الجهاز."),
+T("Respiratory alkalosis causes hyperkalemia.",0,"خطأ؛ نقص بوتاسيوم."),
+T("Anxiety, pain and early sepsis can cause respiratory alkalosis.",1),
+T("Respiratory alkalosis is treated by giving more CO2 through a rebreathing mask only in all cases.",0,"خطأ؛ يعالج السبب."),
+T("Respiratory alkalosis shows high PaCO2.",0,"خطأ؛ منخفض."),
+T("Respiratory alkalosis results from hyperventilation and hypocapnia.",1),
+T("Numbness and tingling of extremities can occur in respiratory alkalosis.",1),
+M("Metabolic acidosis is mainly due to:",["Bicarbonate depletion or acid accumulation","Hyperventilation","CO2 retention","Excess bicarbonate"],0,"نقص البيكربونات أو تراكم الأحماض."),
+M("Which condition causes HCO3 depletion?",["Anxiety","Prolonged vomiting","Salicylates early","Diarrhea or small bowel fistula"],3,"الإسهال."),
+M("Excess production of organic acids occurs in:",["Gastric suctioning","Diabetes mellitus","Hyperventilation","Diuretic use"],1,"السكري."),
+M("Inadequate excretion of acids occurs in:",["Fever","Anxiety","Renal disease","Hyperventilation"],2,"أمراض الكلى."),
+M("Which respiratory pattern is typical in metabolic acidosis?",["Cheyne-Stokes only","Slow shallow breathing","Apnea","Rapid deep Kussmaul respirations"],3,"تنفس كوسماول."),
+M("Fruity breath is associated with:",["Metabolic acidosis (e.g., diabetic ketoacidosis)","Pulmonary edema","Alkalosis","Hypokalemia"],0,"الحماض الأيضي."),
+M("Why does the patient with metabolic acidosis breathe deeply and rapidly?",["To lower oxygen","To compensate by blowing off CO2","To retain CO2","To increase bicarbonate"],1,"للتعويض بطرد CO2."),
+M("Which treatment is used for metabolic acidosis?",["Sedatives","Diuretics","Antacids","IV bicarbonate"],3,"بيكربونات وريدية."),
+M("Potassium in metabolic acidosis may initially be:",["Low","Absent","High due to shift out of cells","Unchanged"],2,"مرتفع."),
+M("After correction of acidosis, potassium may become:",["Absent","Low","High","Unchanged"],1,"منخفض."),
+M("A diabetic patient with vomiting has pH 7.20, PaCO2 25 and HCO3 10 mEq/L with deep rapid breathing. This indicates:",["Metabolic acidosis","Metabolic alkalosis","Respiratory alkalosis","Respiratory acidosis"],0,"حماض أيضي."),
+M("Severe untreated metabolic acidosis may lead to:",["Tetany","Hypoventilation only","Coma","Hypertension"],2,"غيبوبة."),
+T("Hyperkalemia may occur in metabolic acidosis.",1),
+T("Diarrhea can cause metabolic acidosis due to bicarbonate loss.",1),
+T("Hypokalemia is impossible after correcting acidosis.",0,"خطأ؛ قد يحدث."),
+T("Kussmaul respirations are slow and shallow.",0,"خطأ؛ سريعة وعميقة."),
+T("Fruity breath may occur in metabolic acidosis.",1),
+T("Management of metabolic acidosis excludes maintaining tissue perfusion.",0,"خطأ؛ من الأساسيات."),
+M("Metabolic alkalosis involves:",["Bicarbonate retention or acid loss","Bicarbonate loss","Hyperventilation only","CO2 retention"],0,"احتباس البيكربونات أو فقد الأحماض."),
+M("Which cause leads to loss of hydrochloric acid?",["Diarrhea","Diabetes","Renal failure","Prolonged vomiting or gastric suctioning"],3,"القيء المطول أو الشفط المعدي."),
+M("Which medications can cause metabolic alkalosis?",["Insulin only","Diuretics, antacids and steroids","Antibiotics","Vitamins"],1,"مدرات وأنتاسيد وستيرويد."),
+M("Excessive baking soda ingestion causes:",["No change","Respiratory acidosis","Metabolic alkalosis","Metabolic acidosis"],2,"قلاء أيضي."),
+M("Breathing in compensated metabolic alkalosis is:",["Kussmaul","Absent","Rapid and deep","Slow and shallow"],3,"بطيء وسطحي."),
+M("Which sign occurs in metabolic alkalosis?",["Hypotonia only","Tetany and hypertonic muscles","Kussmaul breathing","Fruity breath"],1,"تيبس عضلي وتكزز."),
+M("IV infusion in metabolic alkalosis aims to:",["Restore normal fluid volume","Stop breathing","Increase bicarbonate","Increase CO2"],0,"استعادة حجم السوائل."),
+M("Why is chloride supplementation given?",["To lower potassium","To allow the kidney to absorb sodium with chloride and excrete excess bicarbonate","To increase CO2","To increase bicarbonate"],1,"لإخراج البيكربونات الزائدة."),
+M("Which electrolytes are replaced in metabolic alkalosis?",["Sodium only","Calcium only","Bicarbonate","Potassium and magnesium"],3,"بوتاسيوم ومغنيسيوم."),
+M("A patient with nasogastric suction for 3 days has pH 7.55, HCO3 36 and slow shallow breathing. This is:",["Respiratory acidosis","Metabolic acidosis","Metabolic alkalosis","Respiratory alkalosis"],2,"قلاء أيضي."),
+M("The nurse should anticipate that high-dose diuretics causing alkalosis will be:",["Stopped or adjusted","Combined with antacids","Increased","Given with baking soda"],0,"إيقاف الدواء المسبب."),
+T("Potassium loss is a cause of metabolic alkalosis.",1),
+T("Tetany can occur in metabolic alkalosis.",1),
+T("Metabolic alkalosis is managed with IV bicarbonate.",0,"خطأ؛ تُعالج بالسوائل والكلوريد ووقف السبب."),
+T("Prolonged vomiting can cause metabolic alkalosis.",1),
+T("Metabolic alkalosis is characterized by bicarbonate loss.",0,"خطأ؛ احتباس البيكربونات."),
+T("Respiration in compensated metabolic alkalosis is rapid and deep.",0,"خطأ؛ بطيء وسطحي."),
+M("pH 7.30, PaCO2 55, HCO3 26. This ABG shows:",["Metabolic acidosis","Metabolic alkalosis","Respiratory acidosis","Respiratory alkalosis"],2,"حماض تنفسي."),
+M("pH 7.31, PaCO2 38, HCO3 15. This ABG shows:",["Normal","Metabolic acidosis","Respiratory acidosis","Respiratory alkalosis"],1,"حماض أيضي."),
+M("pH 7.52, PaCO2 28, HCO3 24. This ABG shows:",["Metabolic alkalosis","Normal","Respiratory acidosis","Respiratory alkalosis"],3,"قلاء تنفسي."),
+M("pH 7.50, PaCO2 42, HCO3 33. This ABG shows:",["Metabolic alkalosis","Respiratory acidosis","Respiratory alkalosis","Metabolic acidosis"],0,"قلاء أيضي."),
+M("pH 7.40, PaCO2 40, HCO3 24. This ABG is:",["Acidosis","Compensated acidosis","Normal","Alkalosis"],2,"طبيعي."),
+M("The normal PaCO2 range is:",["10 to 20 mmHg","35 to 45 mmHg","50 to 60 mmHg","20 to 30 mmHg"],1,"35–45."),
+M("Which ABG value reflects the respiratory component?",["Sodium","Chloride","HCO3","PaCO2"],3,"PaCO2."),
+M("Which ABG value reflects the metabolic component?",["HCO3","PaCO2","PaO2","SaO2"],0,"HCO3."),
+T("A pH of 7.40 with PaCO2 40 is within normal limits.",1),
+T("A normal PaCO2 range is 50 to 60 mmHg.",0,"خطأ؛ 35–45 ملم زئبق."),
+T("PaCO2 above 45 mmHg with low pH indicates respiratory acidosis.",1),
+T("High HCO3 with pH above 7.45 suggests metabolic alkalosis.",1),
+T("HCO3 reflects the respiratory component of acid-base balance.",0,"خطأ؛ المكون الأيضي."),
+T("PaCO2 reflects the respiratory component of acid-base balance.",1),
+T("pH 7.50 with PaCO2 28 indicates respiratory acidosis.",0,"خطأ؛ قلاء تنفسي."),
+T("A low HCO3 with low pH indicates metabolic alkalosis.",0,"خطأ؛ حماض أيضي.")
+]
+},
+{
+name:"الموضوع 2: Mechanical Ventilation",
+nameEn:"الموضوع الثاني - Topic 2: Mechanical Ventilation",
+questions:[
+M("Mechanical ventilation is:",["A suction method","Ventilation of the lungs by artificial means, usually a ventilator","A form of oxygen mask","Chest physiotherapy"],1,"تهوية الرئتين بوسيلة صناعية."),
+M("Mechanical ventilation is instituted when:",["The patient is hungry","Pain occurs","PaO2 cannot be maintained by basic oxygen delivery systems","The patient is anxious"],2,"عند فشل وسائل الأكسجين البسيطة."),
+M("A ventilator delivers gas to the lungs with:",["Negative or positive pressure","Gravity","Only negative pressure","Only suction"],0,"ضغط سالب أو موجب."),
+M("Mechanical ventilation can:",["Replace antibiotics","Eliminate need for nursing care","Cure the disease process","Support the patient until resolution of symptoms"],3,"تدعم المريض حتى زوال الأعراض."),
+M("Which is a global indication for mechanical ventilation?",["Normal PaCO2","Stable SpO2","Apnea","Mild cough"],2,"توقف التنفس."),
+M("Acute ventilatory failure is defined as:",["PaCO2 < 35","PaO2 > 100","pH > 7.45","PaCO2 > 50 mmHg and pH < 7.30"],3,"PaCO2 > 50 وpH < 7.30."),
+M("Severe refractory hypoxemia is:",["PaO2 > 80","PaO2 ≤ 60 mmHg with FiO2 ≥ 60%","FiO2 < 21%","SaO2 > 95"],1,"PaO2 ≤ 60 مع FiO2 ≥ 60%."),
+M("Which is a clinical sign of severe respiratory failure?",["Agonal breathing, obtundation or severe abdominal paradox","Alert state","Slow regular breathing","Normal respiratory rate"],0,"تنفس احتضاري أو خمول."),
+M("Impending acute ventilatory failure means:",["Apnea only","The patient recovered","Gas exchange data trending toward failure despite treatment","Normal ABG"],2,"تدهور الغازات رغم العلاج."),
+M("Which is a condition commonly requiring mechanical ventilation?",["ARDS","Common cold","Mild hypertension","Sprained ankle"],0,"ARDS."),
+M("Which condition also requires mechanical ventilation?",["Constipation","Drug overdose","Anemia","Mild gastritis"],1,"جرعة زائدة."),
+M("A patient with head trauma has loss of consciousness and agonal breathing. The nurse anticipates:",["Incentive spirometry","Nasal cannula oxygen","Observation only","Endotracheal intubation and mechanical ventilation"],3,"التنبيب والتهوية."),
+T("A ventilator can deliver gas using positive or negative pressure.",1),
+T("PaO2 ≤ 60 mmHg refractory to FiO2 ≥ 60% is an indication for MV.",1),
+T("Sepsis and severe pneumonia are not indications for MV.",0,"خطأ؛ من الحالات المسببة."),
+T("Mechanical ventilation can cure the underlying disease.",0,"خطأ؛ تدعم فقط."),
+T("Apnea is an indication for mechanical ventilation.",1),
+T("Acute ventilatory failure is defined as PaCO2 below 35 mmHg.",0,"خطأ؛ أكثر من 50."),
+M("In control mode (CM), the client:",["Cannot initiate breaths","Breathes spontaneously only","Can initiate breaths","Controls the settings"],0,"لا يبدأ الأنفاس."),
+M("In control mode the ventilator provides:",["Only oxygen","Only pressure support","Preset tidal volume, rate and O2 concentration","Only PEEP"],2,"حجم مد ومعدل مضبوطان."),
+M("In assist control (A/C) mode, the patient can:",["Not breathe","Control volume","Breathe without assistance","Initiate a breath and receive the preset tidal volume"],3,"يبدأ نفساً ويحصل على الحجم."),
+M("In A/C, total respiratory rate equals:",["Patient breaths only","Patient spontaneous breaths plus set breaths","VT × f","Set breaths only"],1,"المضبوط + التلقائي."),
+M("IMV provides:",["Pressure support only","Only mandatory breaths","A preset number of breaths per minute with spontaneous breaths in between","Only spontaneous breaths"],2,"أنفاس إلزامية مع تلقائية بينها."),
+M("A disadvantage of IMV is:",["Mandatory breaths are not synchronized, causing stacking","It increases weaning","It is too slow","It requires no ventilator"],0,"عدم التزامن يسبب التكدس."),
+M("SIMV differs from IMV in that:",["It has no oxygen","Ventilator breaths are synchronized with the patient's spontaneous breath","It uses negative pressure","It has no mandatory breaths"],1,"التزامن مع نفس المريض."),
+M("Which mode is used to wean the patient?",["None","Control mode","A/C","SIMV"],3,"SIMV."),
+M("Which mode requires the nurse to know that the patient does ALL the breathing work?",["Control mode","CPAP","A/C","IMV"],1,"CPAP."),
+M("A patient on control mode begins to fight the ventilator by trying to breathe. This indicates the patient:",["Is attempting spontaneous breathing but cannot initiate breaths in this mode","Needs more fluids","Has stable ABG","Is recovering fully"],0,"يحاول التنفس ولكن النمط لا يسمح."),
+T("SIMV is used to wean patients from mechanical ventilation.",1),
+T("In A/C mode total RR can exceed the set rate.",1),
+T("In control mode the patient can initiate breaths.",0,"خطأ؛ لا يستطيع."),
+T("IMV mandatory breaths are synchronized with the patient's effort.",0,"خطأ؛ غير متزامنة."),
+T("SIMV avoids stacking by synchronizing breaths.",1),
+T("Control mode allows the patient to trigger the ventilator at will.",0,"خطأ؛ لا يستطيع بدء نفس."),
+M("PEEP is:",["A mode of ventilation","Negative pressure","Pressure during inspiration","Positive pressure applied at the end of expiration during ventilator breaths"],3,"ضغط إيجابي نهاية الزفير."),
+M("PEEP is classified as a:",["Alarm","Mode","Setting, not a mode","Complication"],2,"إعداد وليس نمطاً."),
+M("CPAP is:",["A complication","A mode applying positive end-expiratory pressure during spontaneous breaths","A weaning criterion","A setting"],1,"نمط."),
+M("PEEP and CPAP improve oxygenation by:",["Reducing oxygen","Increasing CO2","Increasing secretions","Opening collapsed alveoli and preventing collapse at end-expiration"],3,"فتح الحويصلات المنهارة."),
+M("PSV (pressure support ventilation) is used mainly for:",["Control ventilation","Cardiac arrest","Weaning","Apnea"],2,"الفطام."),
+M("PSV overcomes:",["Airway resistance and reduces work of breathing","Hypotension","Cardiac output","Renal failure"],0,"مقاومة المجرى."),
+M("FiO2 range delivered by ventilators is:",["0 to 10%","21% to 100%","10% to 20%","50% only"],1,"21–100%."),
+M("The usual tidal volume setting is:",["5 to 15 ml/kg","1 to 2 ml/kg","30 ml/kg","50 ml/kg"],0,"5–15 مل/كجم."),
+M("The usual ventilator rate is:",["2 to 4","30 to 40","60","10 to 16 breaths/min"],3,"10–16."),
+M("The usual I:E ratio is:",["2:1","1:10","1:2","3:1"],2,"1:2."),
+M("Minute volume (VE) equals:",["VT ÷ f","f ÷ VT","FiO2 × VT","VT × f"],3,"الحجم المدّ × المعدل."),
+M("A sigh volume is:",["A mode","Half the tidal volume","1.5 to 2 times the tidal volume to prevent atelectasis","Equal to the minute volume"],2,"1.5–2 مرة حجم المد."),
+M("Humidifier temperature should be kept at:",["45°C","35 to 37°C","20°C","50°C"],1,"35–37."),
+M("The humidifier water level should be:",["Adequate without overfilling","Empty","Not checked","Overfilled"],0,"كافٍ بلا إفراط."),
+T("PEEP improves oxygenation by preventing alveolar collapse at end-expiration.",1),
+T("The sigh volume is smaller than the tidal volume.",0,"خطأ؛ 1.5–2 مرة."),
+T("CPAP is a mode while PEEP is a setting.",1),
+T("FiO2 delivered by the ventilator ranges from 5% to 10%.",0,"خطأ؛ 21–100%."),
+T("Minute volume equals tidal volume multiplied by respiratory rate.",1),
+T("The usual I:E ratio is 3:1.",0,"خطأ؛ 1:2."),
+T("PSV is used primarily for weaning.",1),
+T("Humidification should be kept at 50°C.",0,"خطأ؛ 35–37°C."),
+M("When a ventilator alarm sounds, the nurse should first:",["Turn off the ventilator","Ignore it","Call family","Assess the patient while silencing the alarm"],3,"تقييم المريض."),
+M("If the problem cannot be quickly identified, the nurse should:",["Increase sedation","Wait for hours","Disconnect the patient and ventilate with a resuscitation bag with oxygen","Reduce FiO2"],2,"تهوية بالأمبو."),
+M("The resuscitation bag is connected to:",["Oxygen","Water","Air only","Suction"],0,"أكسجين."),
+M("Respiratory rate during hourly assessment should be counted for:",["5 seconds","One full minute and compared with the ventilator rate","10 seconds","15 seconds"],1,"دقيقة كاملة."),
+M("Breath sounds are assessed to detect:",["Fever","Pain","ETT displacement","Hunger"],2,"انزياح الأنبوب."),
+M("Early hypoxia is detected through changes in:",["Appetite","Level of consciousness","Urine color","Hair"],1,"مستوى الوعي."),
+M("Which GI complication should be assessed in ventilated patients?",["Gastric bleeding from stress ulcer","Hepatitis","Constipation only","Dysphagia only"],0,"نزف الإجهاد."),
+M("Which parameter is checked hourly on the ventilator?",["Only the brand","Only the plug","Only color","Mode, FiO2, VT, RR, PEEP and alarms"],3,"جميع الإعدادات."),
+M("ETT assessment includes:",["Position, tape, exit mark and cuff pressure","Only label","Only length of tube","Only color"],0,"الموضع والشريط والعلامة والكفة."),
+M("Which is a nursing diagnosis for ventilated patients?",["Hyperactivity","Elevated appetite","Ineffective airway clearance","Excess sleep"],2,"عدم فعالية تنظيف المجرى."),
+M("Which diagnosis relates to inability to talk with an ETT?",["Skin integrity","Constipation","Anxiety only","Impaired verbal communication"],3,"اضطراب التواصل اللفظي."),
+M("Which is also a nursing diagnosis?",["Hypertension only","High risk for infection","High appetite","Excess comfort"],1,"خطر العدوى."),
+T("Altered nutrition less than body requirements is a possible nursing diagnosis.",1),
+T("Ventilator settings are checked once daily only.",0,"خطأ؛ كل ساعة."),
+T("The ventilator alarm can be turned off and ignored if repeated.",0,"خطأ؛ يجب الاستجابة فوراً."),
+T("If the problem cannot be identified, the patient should be bagged with oxygen.",1),
+T("The nurse should assess the patient first when an alarm sounds.",1),
+T("Respiratory rate is counted for 15 seconds during assessment.",0,"خطأ؛ دقيقة كاملة."),
+T("Respiratory rate should be assessed hourly by counting for only 5 seconds.",0,"خطأ؛ دقيقة كاملة."),
+T("Changes in level of consciousness may be an early sign of hypoxia.",1),
+M("To reduce fear and anxiety the nurse should:",["Avoid talking","Keep noise high","Dim lights at all times","Explain procedures and answer alarms promptly"],3,"شرح الإجراءات والاستجابة للإنذارات."),
+M("Oxygenation before and after suctioning is done to:",["Increase secretions","Reduce cough","Prevent hypoxia","Prevent infection only"],2,"منع نقص الأكسجين."),
+M("Which communication aid is used for a ventilated patient?",["Paper and pencil or picture boards","None","Telephone","Loud speaking"],0,"ورقة وقلم ولوحات."),
+M("Which measure prevents stress ulcers?",["Aspirin","Cimetidine, ranitidine or antacids","Steroids","Diuretics"],1,"مضادات الحموضة."),
+M("Eye care for sedated ventilated patients includes:",["Only saline spray","No care","Artificial tears or antibiotic ointment and taping eyelids shut","Only lights"],2,"دموع صناعية وتغطية."),
+M("Oral care should be done every:",["Week","2 hours","24 hours","8 hours only"],1,"كل ساعتين."),
+M("The patient is turned every:",["8 hours","24 hours","Weekly","2 hours"],3,"كل ساعتين."),
+M("Urine output should be kept at:",["30 to 60 ml/hour","5 ml/hour","200 ml/hour","100 ml/hour"],0,"30–60 مل/ساعة."),
+M("To prevent constipation the nurse uses:",["Sedatives","Antacids","Mild cathartics, suppositories or enemas","Fluid restriction"],2,"ملينات."),
+M("Suctioning should be done:",["Without gloves","On an as-needed basis using sterile technique","Using clean water only","Every 5 minutes routinely"],1,"عند الحاجة وبتعقيم."),
+M("Which area is suctioned first?",["Tracheobronchial tree before the oropharynx","Mouth first","Nose first","Oropharynx before the trachea"],0,"القصبات قبل الفم."),
+M("Ventilator circuit is changed every:",["5 minutes","Never","1 week only","24 to 72 hours"],3,"24–72 ساعة."),
+M("Only ___ is used in the humidifier:",["Saline","Sterile water","Tap water","Distilled juice"],1,"ماء معقم."),
+M("Which is an early sign of infection in a ventilated patient?",["Temperature > 38°C and HR > 100","HR 70","Clear secretions","Temperature 36°C"],0,"حرارة > 38 ونبض > 100."),
+M("Stoma care is performed every:",["1 hour","Month","Day only","8 hours"],3,"كل 8 ساعات."),
+T("Sterile water should be used in the ventilator humidifier.",1),
+T("Urine output of 5 ml/hour is acceptable.",0,"خطأ؛ 30–60 مل/ساعة."),
+T("The tracheobronchial tree is suctioned before the oropharynx.",1),
+T("Tracheal suction is done on a routine schedule every 5 minutes.",0,"خطأ؛ عند الحاجة."),
+T("Condensation in tubing should be left to collect.",0,"خطأ؛ يُفرغ بانتظام."),
+T("The nurse oxygenates the patient before and after suctioning.",1),
+T("The ventilator circuit should be changed every 5 minutes.",0,"خطأ؛ كل 24–72 ساعة."),
+T("Oral care is done every 2 hours for ventilated patients.",1),
+M("Which is an airway complication of MV?",["Pancreatitis","Anemia","Unplanned extubation","Hypertension"],2,"سحب الأنبوب غير المخطط."),
+M("Barotrauma is injury due to:",["Cold","Excess humidity","Infection","Excessive pressure"],3,"ضغط مفرط."),
+M("Volutrauma results from:",["Low volume","Excessive tidal volume","Low pressure","Low FiO2"],1,"حجم مد زائد."),
+M("Which is a result of barotrauma?",["Ulcers","Pneumonia only","Pneumothorax or subcutaneous emphysema","Anemia"],2,"استرواح صدري."),
+M("Oxygen toxicity is a complication related to:",["High FiO2 for prolonged periods","Low FiO2","Low rate","Low PEEP"],0,"نسبة أكسجين عالية."),
+M("VAP stands for:",["Ventilation after pulmonary","Venous artery pressure","Ventilator-associated pneumonia","Variable airway pressure"],2,"ذات الرئة المرتبطة بالتنفس."),
+M("VAP results from:",["Aspiration of colonized gastric or oropharyngeal secretions","Low oxygen","Lack of PEEP","Warm air"],0,"استنشاق إفرازات ملوثة."),
+M("Hypotension and decreased cardiac output in MV result from:",["Hypervolemia","Increased intrathoracic pressure and decreased venous return","Decreased pressure","Increased venous return"],1,"زيادة الضغط الصدري."),
+M("Which GI complication occurs in MV?",["Gallstones","Hepatitis","Appendicitis","Stress ulcers and GI bleeding"],3,"قرحة الإجهاد."),
+M("Which psychosocial complication occurs?",["None","Insomnia only","Stress and anxiety","Euphoria"],2,"التوتر والقلق."),
+M("A ventilated patient suddenly develops absent breath sounds on the left, tracheal shift and hypotension. The nurse suspects:",["Anxiety","Hypoglycemia","Pulmonary embolism","Tension pneumothorax"],3,"استرواح صدري ضاغط."),
+M("Which measure prevents VAP?",["Avoiding oral care","Oral hygiene and elevating the head of bed","Reducing suction","Lying flat"],1,"نظافة الفم ورفع الرأس."),
+T("VAP results from aspiration of colonized secretions.",1),
+T("Unplanned extubation is a possible airway complication.",1),
+T("Poor oral hygiene reduces the risk of VAP.",0,"خطأ؛ يزيد الخطر."),
+T("Oxygen toxicity may occur with prolonged high FiO2.",1),
+T("Increased intrathoracic pressure from PPV improves venous return.",0,"خطأ؛ يقلله."),
+T("Barotrauma and volutrauma can cause pneumothorax.",1),
+T("MV decreases intrathoracic pressure and increases venous return.",0,"خطأ؛ يزيد الضغط الصدري ويقلل العائد."),
+T("Mechanical ventilation has no psychosocial complications.",0,"خطأ؛ القلق والتوتر.")
+]
+},
+{
+name:"الموضوع 5: Pulmonary Edema",
+nameEn:"الموضوع الخامس - Topic 5: Pulmonary Edema",
+questions:[
+M("Pulmonary edema is:",["Lung infection only","Blood clot in pulmonary artery","Air in pleura","Abnormal accumulation of fluid in the lungs"],3,"تجمع سوائل غير طبيعي في الرئتين."),
+M("The fluid may accumulate in:",["Pericardium","Bronchi only","Interstitial spaces or alveoli","Pleura only"],2,"الحيز البيني أو الحويصلات."),
+M("Which causes altered capillary permeability?",["Over infusion","Inhaled toxins","Left ventricular failure","Hypoalbuminemia"],1,"سموم مستنشقة."),
+M("Which is a cause with altered capillary permeability?",["Fluid overload","Hypoalbuminemia","ARDS","Mitral stenosis"],2,"ARDS."),
+M("Which is also included?",["High altitude","Near-drowning, smoke inhalation, aspiration pneumonia","Mitral stenosis","Lymphatic insufficiency"],1,"الغرق والدخان."),
+M("The most common cardiac cause of increased capillary pressure is:",["Aortic aneurysm","Right atrial failure","Hypoalbuminemia","Left ventricular failure"],3,"فشل البطين الأيسر."),
+M("Other cardiac causes include:",["Mitral stenosis and subacute bacterial endocarditis","Aortic aneurysm","Pericarditis","Anemia"],0,"تضيق الميترال."),
+M("Over infusion of fluids causes pulmonary edema by:",["Lymphatic blockage","Increasing pulmonary capillary pressure","Decreasing pressure","Increasing oncotic pressure"],1,"زيادة ضغط الشعيرات."),
+M("Hypoalbuminemia causes pulmonary edema via:",["Lymphatic obstruction","Increased permeability","Increased oncotic pressure","Decreased oncotic pressure"],3,"انخفاض الضغط الجرمي."),
+M("Hypoalbuminemia may result from:",["Renal, hepatic or nutritional causes","Vitamin intake","Fever","Exercise"],0,"كلوي أو كبدي أو غذائي."),
+M("High-altitude pulmonary edema belongs to:",["Lymphatic insufficiency","Altered permeability","Mixed or unknown mechanisms","Increased pressure"],2,"آليات مختلطة."),
+M("Neurogenic pulmonary edema follows:",["CNS trauma or subarachnoid bleeding","Obesity","Anemia","Pneumonia"],0,"إصابات الجهاز العصبي."),
+M("Heroin overdose causes pulmonary edema through:",["Increased pressure","Mixed or unknown mechanisms","Hypoalbuminemia","Lymphatic insufficiency"],1,"آليات مختلطة."),
+T("Hypoalbuminemia increases oncotic pressure.",0,"خطأ؛ يخفضه."),
+T("Left ventricular failure is a cardiac cause of pulmonary edema.",1),
+T("Pulmonary edema fluid accumulates only in alveoli.",0,"خطأ؛ الحيز البيني أو الحويصلات."),
+T("Pulmonary edema is the abnormal accumulation of fluid in the lungs.",1),
+T("ARDS causes pulmonary edema by altering capillary permeability.",1),
+T("Over infusion of fluids does not cause pulmonary edema.",0,"خطأ؛ يسببها."),
+M("A feeling of 'air hunger' or 'drowning' is:",["A sign of rib fracture","A drug effect","A normal feeling","A manifestation of pulmonary edema"],3,"من أعراض الوذمة."),
+M("Orthopnea means:",["Rapid breathing","Slow breathing","Shortness of breath when lying down","Cough"],2,"ضيق نفس عند الاستلقاء."),
+M("Lung sounds in pulmonary edema include:",["Normal sounds","Pleural rub only","Silent chest","Crackles"],3,"فرقعات."),
+M("Another manifestation is:",["Coughing up blood","Hypertension only","Constipation","Bradycardia"],0,"سعال دموي."),
+M("Patient with pulmonary edema is placed:",["Trendelenburg","Upright with legs dangling","Flat","Prone"],1,"جلوس والأرجل متدلية."),
+M("Why is the upright position with dangling legs used?",["It increases return","It stops breathing","It reduces venous return to the heart","It prevents cough"],2,"يقلل العائد الوريدي."),
+M("PEEP in pulmonary edema:",["Decreases fluid movement out of pulmonary capillaries","Removes fluid","Stops oxygen","Increases fluid"],0,"يقلل تسرب السوائل."),
+M("Morphine in pulmonary edema:",["Increases BP","Reduces peripheral resistance, venous return and anxiety","Increases anxiety","Dehydrates"],1,"يقلل المقاومة والقلق."),
+M("Diuretics are given to:",["Increase BP","Reduce oxygen","Retain fluid","Increase urine and remove excess fluid"],3,"طرد السوائل."),
+M("Which drug increases contractility?",["Naloxone","Furosemide","Dobutamine","Morphine"],2,"دوبوتامين."),
+M("When giving morphine, which antidote should be available?",["Naloxone hydrochloride (Narcan)","Flumazenil","Vitamin K","Atropine"],0,"نالوكسون."),
+M("Morphine requires observation for:",["Tachycardia only","Hypertension","Respiratory depression, hypotension and vomiting","Fever"],2,"تثبيط التنفس."),
+M("Why is an indwelling catheter used with potent diuretics?",["To prevent infection","To test urine","To dilute urine","To reduce energy and cardiac workload from using a bedpan"],3,"لتقليل مجهود القلب."),
+M("Psychological support includes:",["Restraints","Giving simple concise information in a reassuring voice","Long explanations","Silence"],1,"معلومات بسيطة بصوت مطمئن."),
+M("A patient with heart failure is anxious, gasping, with pink frothy sputum and crackles. The first nursing action is:",["Restrict oxygen","Lay flat","Place upright and give oxygen","Give fluids"],2,"وضع جلوس وأكسجين."),
+T("PEEP increases venous return in pulmonary edema.",0,"خطأ؛ يقلله."),
+T("Orthopnea is common in pulmonary edema.",1),
+T("The patient with pulmonary edema is positioned flat.",0,"خطأ؛ جالس."),
+T("The nurse should give long detailed explanations during acute distress.",0,"خطأ؛ بسيطة وموجزة."),
+T("Morphine reduces venous return and anxiety in pulmonary edema.",1),
+T("Naloxone is the antidote kept available for diuretics.",0,"خطأ؛ للمورفين."),
+T("The goal of management is improving left ventricular pumping and respiratory exchange.",1),
+T("Diuretics are part of the medical management of pulmonary edema.",1)
+]
+},
+{
+name:"الموضوع 6: Pulmonary Embolism",
+nameEn:"الموضوع السادس - Topic 6: Pulmonary Embolism",
+questions:[
+M("Pulmonary embolism is:",["Fluid in alveoli","A clot or other emboli lodging in the pulmonary artery system disrupting blood flow","Air in pleura","Lung infection"],1,"انسداد الشريان الرئوي."),
+M("Nonthrombotic emboli include:",["Fat, tumor, amniotic fluid, air","Only clots","Only bacteria","Only drugs"],0,"دهن وهواء وسائل أمنيوسي."),
+M("Venous stasis is a:",["Manifestation","Diagnostic test","Treatment","Predisposing factor"],3,"عامل مهيئ."),
+M("Hypercoagulability occurs in:",["Anemia","Dehydration only","Polycythemia","Hypotension"],2,"كثرة الحمر."),
+M("Injury to vascular endothelium may result from:",["Exercise","Infection or atherosclerosis","Vitamins","Hydration"],1,"عدوى وتصلب."),
+M("Which is a precipitating condition?",["Normal pregnancy","Good diet","Exercise","Previous PE or CHF"],3,"سابقة انسداد."),
+M("Which surgery increases PE risk?",["Orthopedic, vascular, abdominal or gynecologic","Dental","Skin","Eye surgery"],0,"عمليات العظام."),
+M("Which drugs increase risk of PE?",["Vitamins","Antacids","Antibiotics","Oral contraceptives"],3,"موانع الحمل."),
+M("Which patient is at high risk?",["Immobilized postoperative patient after hip surgery","Young child","Healthy walker","Active athlete"],0,"مريض بعد جراحة ورك."),
+T("Polycythemia reduces risk of PE.",0,"خطأ؛ يزيد التخثر."),
+T("Oral contraceptives and pregnancy increase PE risk.",1),
+T("Pulmonary embolism may only be caused by clots.",0,"خطأ؛ أيضاً دهن وهواء."),
+T("Immobility is a predisposing factor for PE.",1),
+M("Submassive embolus causes:",["Coma","Dyspnea, chest pain, cough and apprehension","Shock only","No symptoms"],1,"ضيق نفس وألم صدر."),
+M("Massive embolus adds:",["Hypertension","Bradycardia","Cyanosis, restlessness, confusion, cool clammy skin and decreased urine","Normal skin"],2,"زرقة وتشوش."),
+M("The ABG finding in PE is:",["High PaCO2","Low PaO2, low PaCO2 and high pH","Low pH","Normal"],1,"قلاء تنفسي."),
+M("Which diagnostic test evaluates ventilation and perfusion?",["V/Q lung scan","Urinalysis","Colonoscopy","EEG"],0,"مسح التهوية والتروية."),
+M("Which test is definitive for PE?",["ECG only","Urinalysis","Pulmonary angiography","CBC"],2,"تصوير الأوعية الرئوية."),
+M("The nurse should obtain history regarding:",["Education","Diet only","Hobbies","Previous risk factors"],3,"عوامل الخطورة."),
+M("Wheezing and diaphoresis may occur in:",["Submassive embolus","Mild cold","Fracture","Normal state"],0,"صمة تحت الكبيرة."),
+M("A postoperative patient suddenly develops dyspnea, chest pain and ABG pH 7.50, PaCO2 30, PaO2 55. The nurse suspects:",["Pneumonia only","Pulmonary embolism","Asthma","Hemothorax"],1,"انسداد رئوي."),
+T("ABG in PE typically shows respiratory alkalosis with low PaO2.",1),
+T("ABG in PE typically shows high PaCO2 and low pH.",0,"خطأ؛ PaCO2 منخفض."),
+T("Massive embolus produces no change in skin color.",0,"خطأ؛ زرقة."),
+T("V/Q scan and pulmonary angiography are diagnostic studies for PE.",1),
+M("Prevention of PE includes:",["No treatment","Fluid restriction","Prophylactic anticoagulation such as heparin","Bed rest only"],2,"مضادات التخثر الوقائية."),
+M("Treatment aims to:",["Reduce oxygen","Increase clotting","Increase pulmonary pressure","Prevent recurrence and promote gas exchange"],3,"منع التكرار وتحسين تبادل الغازات."),
+M("Which drugs are used?",["Thrombolytics and anticoagulants","Steroids only","Antacids","Laxatives"],0,"مذيبات الجلطات."),
+M("The leading cause of PE is:",["Anemia","Pneumonia","DVT","Asthma"],2,"الخثار الوريدي العميق."),
+M("Which measure prevents DVT?",["Bed rest","Leg massage","Dehydration","Pneumatic compression stockings and progressive ambulation"],3,"جوارب ضاغطة وحركة."),
+M("Homans sign is:",["Chest pain","Calf pain on dorsiflexion of the foot","Headache","Cough"],1,"ألم الربلة."),
+M("Which signs of DVT are assessed?",["Deep calf pain, tenderness and redness","Cough","Nausea","Headache"],0,"ألم الربلة."),
+M("Which lab test is monitored with heparin therapy?",["Hemoglobin only","Calcium","aPTT","Sodium"],2,"aPTT."),
+M("Which lab is monitored with warfarin?",["Sodium","Potassium","Blood glucose","INR"],3,"INR."),
+M("Nurse should observe for bleeding in:",["Nails","Gums, skin, urine, stool and emesis","Hair only","Eyes only"],1,"اللثة والجلد والبول."),
+M("Patient education includes:",["Exercise only","Diet only","None","Causes, DVT recurrence prevention and bleeding precautions"],3,"الأسباب والوقاية."),
+M("A patient on heparin has gum bleeding and hematuria. The nurse should:",["Continue as usual","Notify the provider and monitor aPTT","Increase dose","Give aspirin"],1,"إبلاغ الطبيب."),
+T("DVT is the leading cause of PE.",1),
+T("Heparin is monitored by INR.",0,"خطأ؛ aPTT."),
+T("Anticoagulated patients need no bleeding observation.",0,"خطأ؛ يجب المراقبة."),
+T("Pneumatic compression stockings help prevent DVT.",1),
+T("INR or aPTT is monitored during anticoagulant therapy.",1),
+T("Leg massage is the preferred DVT prevention method.",0,"خطأ؛ قد يحرك الجلطة.")
+]
+}
+];
+
+const QUESTION_BANK=ORIGINAL_BANK.map(function(sec){
+  return{name:sec.name,nameEn:sec.nameEn,originalName:sec.name,questions:sec.questions.map(function(q,idx){return Object.assign({},q,{num:idx+1})})};
+});
+
+const LS_KEY='critical_care_selected_qbank_v1';
+const TRANS_CACHE_KEY='critical_care_trans_cache_v1';
+let transCache={};
+let state={mode:'practice',order:'device',showTranslation:true,timerSeconds:0,quizQuestions:[],currentIndex:0,correctCount:0,wrongCount:0,answered:false,selectedOptionIdx:null,sessionMistakes:[],timerInterval:null,timeLeft:0,questionStates:[]};
+let maleEnglishVoice=null,currentExplainLang='ar',currentExplainName='';
+
+function safeGetLS(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function safeSetLS(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function safeRemoveLS(k){try{localStorage.removeItem(k)}catch(e){}}
+try{transCache=JSON.parse(safeGetLS(TRANS_CACHE_KEY)||'{}')||{};}catch(e){transCache={};}
+
+function saveTransCache(){
+  try{
+    const keys=Object.keys(transCache);
+    if(keys.length>2500)keys.slice(0,500).forEach(k=>delete transCache[k]);
+    safeSetLS(TRANS_CACHE_KEY,JSON.stringify(transCache));
+  }catch(e){}
+}
+
+async function translateEnToAr(text){
+  if(!text)return '';
+  const clean=text.replace(/_{3,}/g,'...').trim();
+  if(transCache[clean])return transCache[clean];
+  try{
+    const res=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ar&dt=t&q='+encodeURIComponent(clean));
+    if(res.ok){
+      const data=await res.json();
+      if(data&&Array.isArray(data[0])){
+        const out=data[0].map(x=>(x&&x[0])?x[0]:'').join('').trim();
+        if(out){transCache[clean]=out;return out;}
+      }
+    }
+  }catch(e){}
+  try{
+    const res2=await fetch('https://api.mymemory.translated.net/get?q='+encodeURIComponent(clean)+'&langpair=en|ar');
+    if(res2.ok){
+      const d2=await res2.json();
+      const out2=d2&&d2.responseData&&d2.responseData.translatedText;
+      if(out2&&out2.trim()){transCache[clean]=out2.trim();return out2.trim();}
+    }
+  }catch(e){}
+  return '';
+}
+
+const AR_LETTERS=['أ) ','ب) ','ج) ','د) '];
+async function ensureQuestionTranslated(q){
+  if(!q||q._transDone)return;
+  let changed=false;
+  const tasks=[];
+  if(!q.ar){tasks.push(translateEnToAr(q.en).then(ar=>{if(ar){q.ar=ar;changed=true;}}));}
+  q.options.forEach((opt,i)=>{
+    if(!opt.ar){
+      const m=opt.en.match(/^([A-D]\)\s*)(.*)$/i);
+      const body=m?m[2]:opt.en, prefix=m?(AR_LETTERS[i]||''):'';
+      tasks.push(translateEnToAr(body).then(ar=>{if(ar){opt.ar=prefix+ar;changed=true;}}));
+    }
+  });
+  if(tasks.length>0){await Promise.all(tasks);if(changed)saveTransCache();}
+  q._transDone=!!(q.ar&&q.options.every(o=>!!o.ar));
+}
+
+function prefetchNextQuestions(fromIdx){
+  if(!state.showTranslation)return;
+  [fromIdx+1,fromIdx+2].forEach(i=>{if(i<state.quizQuestions.length)ensureQuestionTranslated(state.quizQuestions[i]);});
+}
+
+function setTheme(t){document.body.classList.toggle('light',t==='light');document.querySelectorAll('.theme-toggle button').forEach(b=>{b.classList.toggle('active',b.dataset.theme===t)});safeSetLS('critical_care_theme',t)}
+function loadProgress(){try{const r=safeGetLS(LS_KEY);if(!r)return{attempted:{},mistakes:{}};return JSON.parse(r)}catch(e){return{attempted:{},mistakes:{}}}}
+function saveProgress(p){safeSetLS(LS_KEY,JSON.stringify(p))}
+function qid(s,n){return s+'___'+n}
+
+function isTFQuestion(q){
+  if(q.options&&q.options.length===2){
+    const o0=(q.options[0].en||'').trim().toLowerCase(),o1=(q.options[1].en||'').trim().toLowerCase();
+    return(o0==='true'||o0.startsWith('true'))&&(o1==='false'||o1.startsWith('false'));
+  }
+  return false;
+}
+
+function showExplanation(name){
+  currentExplainName=name;
+  const box=document.getElementById('section-explanation'),title=document.getElementById('explain-title'),textDiv=document.getElementById('explain-text');
+  const data={
+    "الموضوع 1: Acid-Base Balance":{
+      text_ar:"يشمل الموضوع الأول (122 سؤالاً):\n• الأساسيات: الحمض يطلق H+ والقاعدة تستقبله؛ pH الشرايين الطبيعي 7.35–7.45 (متعادل 7). المنظمات: HCO3-، البروتينات والفوسفات داخل الخلايا، والهيموجلوبين؛ التنفس سريع والكلى ساعات لأيام.\n• الحماض التنفسي (pH < 7.35, PaCO2 > 45): احتباس CO2 (COPD، تثبيط التنفس، أمراض عصبية عضلية) مع نعاس وفرط بوتاسيوم (>5)، الأولوية لمجرى الهواء.\n• القلاء التنفسي (pH > 7.45, PaCO2 < 35): فرط التهوية (قلق، ألم، حمى، ساليسيلات مبكرة) مع تنميل ونقص K/Ca/Mg.\n• الحماض الأيضي (pH < 7.35, HCO3 < 22): إسهال، DKA (تنفس كوسماول ورائحة فاكهة)، فشل كلوي؛ يُعالج ببيكربونات وريدية.\n• القلاء الأيضي (pH > 7.45, HCO3 > 26): قيء، شفط معدي، مدرات؛ تكزز وتنفس بطيء سطحي؛ يُعالج بالسوائل والكلوريد وK/Mg.\n• تفسير ABG: PaCO2 (35–45) تنفسي، HCO3 أيضي.",
+      text_en:"Topic 1 (122 Questions):\n• Basics: Acids release H+, bases accept H+; normal arterial pH 7.35–7.45 (neutral 7). Buffers: HCO3-, proteins/phosphates, hemoglobin.\n• Respiratory Acidosis (low pH, PaCO2 > 45): CO2 retention (COPD, CNS depression); hyperkalemia (>5), airway priority.\n• Respiratory Alkalosis (high pH, PaCO2 < 35): hyperventilation (anxiety, pain, fever, early salicylates); low K/Ca/Mg.\n• Metabolic Acidosis (low pH, low HCO3): diarrhea, DKA (Kussmaul, fruity breath), renal failure; IV bicarbonate.\n• Metabolic Alkalosis (high pH, high HCO3): vomiting, NG suction, diuretics; tetany, slow shallow breathing; fluids, chloride, K+/Mg++.\n• ABG: PaCO2 (35–45) = respiratory; HCO3 = metabolic."
+    },
+    "الموضوع 2: Mechanical Ventilation":{
+      text_ar:"يشمل الموضوع الثاني (119 سؤالاً):\n• الدواعي: توقف التنفس، الفشل التهويتي الحاد (PaCO2 > 50, pH < 7.30)، نقص الأكسجة المعند (PaO2 ≤ 60 مع FiO2 ≥ 60%)، ARDS.\n• الأنماط: CM (لا يبدأ المريض نفساً)، A/C (يبدأ ويأخذ الحجم المضبوط)، IMV (غير متزامن)، SIMV (متزامن للفطام)، CPAP (تلقائي).\n• الإعدادات: PEEP (إعداد يفتح الحويصلات)، PSV (للفطام)، FiO2 (21–100%)، VT (5–15 مل/كجم)، المعدل (10–16)، I:E (1:2)، حرارة المرطب (35–37°C بماء معقم).\n• الإنذارات والتقييم: قيّم المريض أولاً، واستخدم الأمبو بالأكسجين إذا لم يتضح السبب؛ فحص الإعدادات كل ساعة وعدّ التنفس دقيقة كاملة.\n• الرعاية والمضاعفات: تشفيط معقم عند الحاجة (القصبات قبل الفم مع أكسجة قبل وبعد)، عناية بالفم وتقليب كل ساعتين، تغيير الدائرة كل 24–72 ساعة؛ المضاعفات: الرضح الضغطي والحجمي، سمية الأكسجين، VAP، هبوط الضغط، قرحة الإجهاد.",
+      text_en:"Topic 2 (119 Questions):\n• Indications: Apnea, acute ventilatory failure (PaCO2 > 50, pH < 7.30), refractory hypoxemia (PaO2 ≤ 60 on FiO2 ≥ 60%), ARDS.\n• Modes: CM, A/C, IMV, SIMV (weaning), CPAP.\n• Settings: PEEP (setting), PSV (weaning), FiO2 21–100%, VT 5–15 ml/kg, RR 10–16, I:E 1:2, humidifier 35–37°C sterile water.\n• Alarms & Care: Assess patient first, bag with O2 if unclear; hourly checks; sterile PRN suctioning (trachea before oropharynx); oral care & turning q2h; circuit q24–72h.\n• Complications: Unplanned extubation, barotrauma, volutrauma, O2 toxicity, VAP, hypotension, stress ulcers."
+    },
+    "الموضوع 5: Pulmonary Edema":{
+      text_ar:"يشمل الموضوع الخامس (42 سؤالاً):\n• التعريف والأسباب: تجمع سوائل بالحيز البيني أو الحويصلات بسبب تغير نفاذية الشعيرات (ARDS، سموم مستنشقة)، زيادة الضغط الشعيري (فشل البطين الأيسر، تضيق الميترال، فرط السوائل)، نقص الألبومين، أو آليات مختلطة.\n• الأعراض والتدبير: جوع للهواء، Orthopnea، فرقعات، بلغم دموي/وردي رغوي؛ الجلوس مع تدلي الساقين، أكسجين وPEEP، مورفين (مع توفر النالوكسون)، مدرات البول مع قسطرة بولية، ودوبوتامين، ودعم نفسي موجز ومطمئن.",
+      text_en:"Topic 5 (42 Questions):\n• Etiology: Fluid in interstitial spaces/alveoli (ARDS, LV failure, mitral stenosis, fluid overload, hypoalbuminemia, neurogenic/high altitude).\n• Management: Air hunger, orthopnea, crackles; upright with legs dangling, O2/PEEP, morphine (keep naloxone ready), diuretics + Foley, dobutamine, concise reassuring support."
+    },
+    "الموضوع 6: Pulmonary Embolism":{
+      text_ar:"يشمل الموضوع السادس (43 سؤالاً):\n• التعريف وعوامل الخطورة: انسداد الشريان الرئوي بجلطة أو دهن/هواء/ورم/سائل أمنيوسي؛ الركود الوريدي، فرط التخثر، جراحات العظام والحوض، موانع الحمل، والـ DVT السبب الرئيسي.\n• الأعراض والتشخيص: ألم صدر وضيق نفس، وفي الضخمة زرقة وتشوش وهبوط؛ ABG قلاء تنفسي مع نقص PaO2؛ V/Q scan وتصوير الأوعية الرئوية هو الحاسم.\n• التدبير والتمريض: جوارب ضاغطة وحركة تدريجية (يُمنع تدليك الساق!)، هيبارين (مراقبة aPTT)، وارفارين (مراقبة INR)، ومراقبة النزف.",
+      text_en:"Topic 6 (43 Questions):\n• Risk Factors: Venous stasis, hypercoagulability, endothelial injury, orthopedic/pelvic surgery, OCPs, DVT (leading cause).\n• Diagnosis: Respiratory alkalosis + low PaO2; V/Q scan; pulmonary angiography (definitive).\n• Care: Compression stockings, ambulation (no leg massage), heparin (aPTT), warfarin (INR), bleeding precautions."
+    }
+  };
+  const d=data[name];title.textContent=name;
+  if(!d){textDiv.textContent=currentExplainLang==='ar'?'لا يوجد شرح':'No explanation.';box.classList.add('show');updateExplainTextClass();return;}
+  textDiv.innerHTML=(currentExplainLang==='ar'?d.text_ar:d.text_en).replace(/\n/g,'<br>');updateExplainTextClass();box.classList.add('show');
+}
+function updateExplainTextClass(){const t=document.getElementById('explain-text');t.classList.remove('ar','en');t.classList.add(currentExplainLang);}
+function closeExplanation(){document.getElementById('section-explanation').classList.remove('show');}
+function setExplainLang(l){currentExplainLang=l;document.querySelectorAll('.explain-controls .lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===l)});if(currentExplainName)showExplanation(currentExplainName);}
+
+function updateHomeStats(){
+  const p=loadProgress(),keys=Object.keys(p.attempted||{});let c=0,w=0;
+  keys.forEach(k=>{if(p.attempted[k]==='correct')c++;else w++});
+  const total=keys.length,pct=total?Math.round((c/total)*100):0;
+  document.getElementById('statAttempted').textContent=total;
+  document.getElementById('statCorrect').textContent=c;
+  document.getElementById('statWrong').textContent=w;
+  document.getElementById('progressPercent').innerHTML=pct+'<small>%</small>';
+  document.getElementById('progressCircle').style.strokeDashoffset=176-(pct/100)*176;
+  updateWeakSectionSuggestion(p);
+}
+
+function updateWeakSectionSuggestion(p){
+  const att=p.attempted||{};let bestIdx=-1,bestRate=0,bestName='';
+  QUESTION_BANK.forEach((sec,idx)=>{
+    let a=0,w=0;sec.questions.forEach(q=>{const k=qid(sec.name,q.num);if(att[k]!==undefined){a++;if(att[k]==='wrong')w++}});
+    if(a>=2){const rate=w/a;if(rate>bestRate){bestRate=rate;bestIdx=idx;bestName=sec.name}}
+  });
+  const link=document.getElementById('weakLink');
+  if(bestIdx>=0&&bestRate>0){
+    link.style.display='flex';document.getElementById('weakSectionName').textContent=bestName;
+    document.getElementById('weakSectionRate').textContent=Math.round(bestRate*100)+'%';link.dataset.sectionIdx=bestIdx;
+  }else link.style.display='none';
+}
+
+function buildSectionList(){
+  const wrap=document.getElementById('section-list');if(!wrap)return;wrap.innerHTML='';
+  QUESTION_BANK.forEach((sec,idx)=>{
+    const div=document.createElement('div');div.className='section-item active';div.dataset.idx=idx;
+    const nameSpan=document.createElement('span');nameSpan.className='sec-title';nameSpan.textContent=sec.nameEn;
+    const infoBtn=document.createElement('button');infoBtn.className='info-btn';infoBtn.type='button';infoBtn.innerHTML='<i class="fas fa-info-circle"></i>';infoBtn.title="شرح الموضوع";
+    infoBtn.onclick=(e)=>{e.stopPropagation();showExplanation(sec.originalName)};
+    const cntSpan=document.createElement('span');cntSpan.className='cnt';cntSpan.textContent=sec.questions.length;
+    div.appendChild(nameSpan);div.appendChild(infoBtn);div.appendChild(cntSpan);
+    div.onclick=()=>{div.classList.toggle('active');updateToggleAllButton();};
+    wrap.appendChild(div);
+  });
+  updateToggleAllButton();
+}
+
+function toggleAllSections(){
+  const items=document.querySelectorAll('#section-list .section-item');
+  const allActive=Array.from(items).every(el=>el.classList.contains('active'));
+  items.forEach(el=>el.classList.toggle('active',!allActive));updateToggleAllButton();
+}
+function updateToggleAllButton(){
+  const items=document.querySelectorAll('#section-list .section-item');
+  const activeCount=document.querySelectorAll('#section-list .section-item.active').length;
+  const btn=document.getElementById('selectAllBtn');
+  if(btn)btn.textContent=(activeCount===items.length&&items.length>0)?'إلغاء الكل':'تحديد الكل';
+}
+
+function toggleOptions(t){
+  document.querySelectorAll('.sub-options').forEach(e=>e.classList.remove('show'));
+  const target=document.getElementById(t);if(target)target.classList.add('show');
+  document.querySelectorAll('.action-icon').forEach(e=>e.classList.remove('active'));
+  const activeIcon=document.querySelector(`.action-icon[data-target="${t}"]`);if(activeIcon)activeIcon.classList.add('active');
+}
+function closeAllOptions(){
+  document.querySelectorAll('.sub-options').forEach(e=>e.classList.remove('show'));
+  document.querySelectorAll('.action-icon').forEach(e=>e.classList.remove('active'));
+  const def=document.querySelector('.action-icon[data-target="modeOptions"]');if(def)def.classList.add('active');
+}
+function selectMode(m){state.mode=m;document.querySelectorAll('#modeOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.mode===m)});closeAllOptions();}
+function selectOrder(o){state.order=o;document.querySelectorAll('#orderOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.order===o)});closeAllOptions();}
+function selectTranslate(t){state.showTranslation=(t==='yes');document.querySelectorAll('#langOptions .action-btn').forEach(e=>{e.classList.toggle('active',e.dataset.translate===t)});closeAllOptions();}
+function selectTimer(s){state.timerSeconds=s;document.querySelectorAll('#timerOptions .action-btn').forEach(e=>{e.classList.toggle('active',parseInt(e.dataset.timer)===s)});closeAllOptions();}
+function toggleQuizTranslation(){
+  state.showTranslation=!state.showTranslation;
+  document.querySelectorAll('#langOptions .action-btn').forEach(e=>{e.classList.toggle('active',(e.dataset.translate==='yes')===state.showTranslation)});
+  renderQuestion();
+}
+
+function enterApp(){
+  try{
+    document.getElementById('main-screen').style.display='block';
+    buildSectionList();updateHomeStats();
+    setTheme(safeGetLS('critical_care_theme')||'dark');
+    if(window.speechSynthesis){
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged=()=>{window.speechSynthesis.getVoices();maleEnglishVoice=null;};
+    }
+  }catch(err){
+    const wrap=document.getElementById('section-list');
+    if(wrap)wrap.innerHTML='<div style="color:#ef5350;padding:10px;">خطأ: '+err.message+'</div>';
+  }
+}
+function goHome(){stopTimer();document.getElementById('screen-quiz').classList.remove('active');document.getElementById('screen-results').classList.remove('active');document.getElementById('main-screen').style.display='block';updateHomeStats();}
+function quitQuiz(){if(confirm('متأكد تخرج؟')){stopTimer();goHome();}}
+function resetProgress(){if(confirm('متأكد تصفير التقدم؟')){safeRemoveLS(LS_KEY);updateHomeStats();}}
+function shuffleArray(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;}
+
+function startQuiz(){
+  const activeEls=document.querySelectorAll('#section-list .section-item.active');
+  if(activeEls.length===0){alert('اختار موضوعاً واحداً على الأقل!');return;}
+  const idxs=Array.from(activeEls).map(el=>parseInt(el.dataset.idx));
+  let qs=[];
+  idxs.forEach(idx=>{const sec=QUESTION_BANK[idx];sec.questions.forEach(q=>{qs.push(Object.assign({},q,{sectionName:sec.name,options:q.options.map(o=>Object.assign({},o))}));});});
+  if(qs.length===0){alert('هذا الموضوع لا يحتوي على أسئلة!');return;}
+  if(state.order==='random')qs=shuffleArray(qs);
+  state.quizQuestions=qs;state.currentIndex=0;state.correctCount=0;state.wrongCount=0;state.sessionMistakes=[];
+  state.questionStates=qs.map(()=>({selectedOption:null,answered:false,isCorrect:false,chosenIdxs:[]}));
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('screen-quiz').classList.add('active');
+  document.getElementById('screen-results').classList.remove('active');
+  const gridContainer=document.getElementById('questions-grid-container');if(gridContainer)gridContainer.classList.remove('show');
+  renderQuestion();
+}
+
+function reviewMistakes(){
+  const p=loadProgress(),mistakeKeys=Object.keys(p.mistakes||{});
+  if(mistakeKeys.length===0){alert('مفيش أخطاء للمراجعة 🎉');return;}
+  let qs=[];
+  QUESTION_BANK.forEach(sec=>{sec.questions.forEach(q=>{if(mistakeKeys.includes(qid(sec.name,q.num)))qs.push(Object.assign({},q,{sectionName:sec.name,options:q.options.map(o=>Object.assign({},o))}));});});
+  if(qs.length===0){alert('مفيش أخطاء للمراجعة 🎉');return;}
+  state.quizQuestions=qs;state.currentIndex=0;state.correctCount=0;state.wrongCount=0;state.sessionMistakes=[];state.mode='practice';
+  state.questionStates=qs.map(()=>({selectedOption:null,answered:false,isCorrect:false,chosenIdxs:[]}));
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('screen-quiz').classList.add('active');
+  document.getElementById('screen-results').classList.remove('active');
+  const gridContainer=document.getElementById('questions-grid-container');if(gridContainer)gridContainer.classList.remove('show');
+  renderQuestion();
+}
+
+function startWeakSectionQuiz(){
+  const link=document.getElementById('weakLink'),idx=link.dataset.sectionIdx;if(idx===undefined)return;
+  document.querySelectorAll('#section-list .section-item').forEach(el=>{el.classList.toggle('active',el.dataset.idx==idx)});
+  startQuiz();
+}
+
+function toggleQuestionsGrid(){
+  const gridContainer=document.getElementById('questions-grid-container');if(!gridContainer)return;
+  gridContainer.classList.toggle('show');
+  if(gridContainer.classList.contains('show'))renderGridButtons();
+}
+function renderGridButtons(){
+  const gridDiv=document.getElementById('q-grid-buttons');if(!gridDiv)return;gridDiv.innerHTML='';
+  state.quizQuestions.forEach((_,i)=>{
+    const btn=document.createElement('button');btn.className='grid-btn';btn.textContent=i+1;
+    const st=state.questionStates[i];
+    if(i===state.currentIndex)btn.classList.add('current');
+    if(st.answered)btn.classList.add(st.isCorrect?'answered-correct':'answered-wrong');
+    btn.onclick=()=>goToSpecificQuestion(i);
+    gridDiv.appendChild(btn);
+  });
+}
+function goToSpecificQuestion(targetIndex){if(targetIndex>=0&&targetIndex<state.quizQuestions.length){state.currentIndex=targetIndex;renderQuestion();}}
+
+function renderQuestion(){
+  const idx=state.currentIndex,q=state.quizQuestions[idx],st=state.questionStates[idx];
+  state.answered=st.answered;state.selectedOptionIdx=st.selectedOption;
+  const total=state.quizQuestions.length;
+  document.getElementById('quiz-position').innerHTML=`<i class="fas fa-question-circle"></i> ${idx+1} / ${total}`;
+  document.getElementById('quiz-score').innerHTML=`<i class="fas fa-check-circle" style="color:var(--success);"></i> ${state.correctCount} <i class="fas fa-times-circle" style="color:var(--danger);margin-right:4px;"></i> ${state.wrongCount}`;
+  document.getElementById('progress-bar').style.width=(idx/total*100)+'%';
+  const qIsTF=isTFQuestion(q);
+  let tagText=`<i class="fas fa-tag"></i> ${q.sectionName}`;
+  if(qIsTF)tagText+=` <span class="tf-badge">صواب / خطأ</span>`;
+  document.getElementById('q-section-tag').innerHTML=tagText;
+  const transBtn=document.getElementById('btn-toggle-trans');
+  if(transBtn)transBtn.innerHTML=state.showTranslation?'<i class="fas fa-language"></i> ترجمة: مفعّلة':'<i class="fas fa-language"></i> EN فقط';
+  const gridToggleBtn=document.getElementById('btn-toggle-grid'),gridContainer=document.getElementById('questions-grid-container');
+  if(state.mode==='practice'){if(gridToggleBtn)gridToggleBtn.style.display='inline-flex';if(gridContainer&&gridContainer.classList.contains('show'))renderGridButtons();}
+  else{if(gridToggleBtn)gridToggleBtn.style.display='none';if(gridContainer)gridContainer.classList.remove('show');}
+
+  wrapEnglishText(`${q.num}. ${q.en}`,document.getElementById('q-en'));
+  const qAr=document.getElementById('q-ar');
+  if(state.showTranslation){qAr.textContent=q.ar||'جارٍ الترجمة...';qAr.style.display='block';}
+  else{qAr.textContent='';qAr.style.display='none';}
+
+  const opts=document.getElementById('options');opts.innerHTML='';
+  q.options.forEach((opt,i)=>{
+    const div=document.createElement('div');div.className='option';div.dataset.idx=i;div.dataset.correct=opt.correct?'true':'false';
+    const enDiv=document.createElement('div');enDiv.className='opt-en';wrapEnglishText(opt.en,enDiv);
+    const arDiv=document.createElement('div');arDiv.className='opt-ar';arDiv.textContent=opt.ar||'';arDiv.style.display=state.showTranslation&&opt.ar?'block':'none';
+    const mark=document.createElement('span');mark.className='mark';
+    div.appendChild(enDiv);div.appendChild(arDiv);div.appendChild(mark);
+    div.onclick=()=>onOptionClick(i);
+    opts.appendChild(div);
+  });
+
+  if(state.showTranslation){
+    if(!q._transDone){
+      ensureQuestionTranslated(q).then(()=>{
+        if(state.currentIndex!==idx||!state.showTranslation)return;
+        qAr.textContent=q.ar||'';qAr.style.display=q.ar?'block':'none';
+        const optEls=opts.querySelectorAll('.option');
+        q.options.forEach((opt,i)=>{
+          if(optEls[i]){const arEl=optEls[i].querySelector('.opt-ar');if(arEl){arEl.textContent=opt.ar||'';arEl.style.display=opt.ar?'block':'none';}}
+        });
+      });
+    }
+    prefetchNextQuestions(idx);
+  }
+
+  if(st.answered){
+    const chosenIdxs=st.chosenIdxs;
+    document.querySelectorAll('.option').forEach(el=>{
+      const idxOpt=parseInt(el.dataset.idx);el.classList.add('disabled');
+      if(el.dataset.correct==='true'){el.classList.add('correct');el.querySelector('.mark').textContent='✅';}
+      else if(chosenIdxs.includes(idxOpt)){el.classList.add('wrong');el.querySelector('.mark').textContent='❌';}
+      if(st.selectedOption===idxOpt)el.classList.add('selected');
+    });
+    const fb=document.getElementById('feedback');fb.classList.remove('hidden');fb.className='feedback-box '+(st.isCorrect?'correct':'wrong');
+    let correctLabels=qIsTF?((q.options.find(o=>o.correct)||{}).en==='True'?'True (صواب)':'False (خطأ)'):q.options.map(o=>o.correct?o.en:null).filter(Boolean).join('، ');
+    fb.innerHTML=`<div class="fb-title">${st.isCorrect?'✅ صحيحة!':'❌ غلط'}</div>${!st.isCorrect?`<div><b>الصح:</b> ${correctLabels}</div>`:''}<div class="fb-explain">💡 ${q.explain_ar||''}</div>`;
+  }else{
+    document.getElementById('feedback').classList.add('hidden');document.getElementById('feedback').innerHTML='';
+  }
+
+  const nextBtn=document.getElementById('btn-next'),prevBtn=document.getElementById('btn-prev');
+  prevBtn.disabled=(idx===0);const isLast=idx===total-1;
+  if(state.mode==='test'){
+    nextBtn.disabled=(state.selectedOptionIdx===null);
+    nextBtn.innerHTML=`<i class="fas fa-arrow-left"></i> ${isLast?'إنهاء ✅':'التالي ⬅️'}`;
+    nextBtn.onclick=()=>{
+      if(state.selectedOptionIdx===null)return;
+      if(!state.answered){
+        const q2=state.quizQuestions[state.currentIndex];
+        const isCorrect=isTFQuestion(q2)?((document.querySelector(`.option[data-idx="${state.selectedOptionIdx}"]`)||{}).dataset?.correct==='true'):q2.options[state.selectedOptionIdx].correct;
+        finalizeAnswer(isCorrect,[state.selectedOptionIdx]);
+      }
+      if(state.currentIndex<state.quizQuestions.length-1){state.currentIndex++;renderQuestion();}else{showResults();}
+    };
+  }else{
+    nextBtn.disabled=false;
+    nextBtn.innerHTML=isLast?`<i class="fas fa-flag-checkered"></i> إنهاء`:`<i class="fas fa-arrow-left"></i> التالي`;
+    nextBtn.onclick=()=>{
+      if(!state.answered){alert('يجب اختيار إجابة أولاً!');return;}
+      if(state.currentIndex<state.quizQuestions.length-1){state.currentIndex++;renderQuestion();}else{showResults();}
+    };
+  }
+  if(!st.answered)startTimer();else stopTimer();
+}
+
+function onOptionClick(i){
+  if(state.answered)return;state.selectedOptionIdx=i;
+  document.querySelectorAll('.option').forEach(el=>el.classList.remove('selected'));
+  document.querySelector(`.option[data-idx="${i}"]`).classList.add('selected');
+  if(state.mode==='test'){document.getElementById('btn-next').disabled=false;}else{submitSingleAnswer(i);}
+}
+function submitSingleAnswer(i){
+  const q=state.quizQuestions[state.currentIndex];
+  const isCorrect=isTFQuestion(q)?(document.querySelector(`.option[data-idx="${i}"]`).dataset.correct==='true'):!!q.options[i].correct;
+  finalizeAnswer(isCorrect,[i]);
+}
+function finalizeAnswer(isCorrect,chosenIdxs){
+  stopTimer();state.answered=true;
+  const idx=state.currentIndex,st=state.questionStates[idx],q=state.quizQuestions[idx];
+  st.selectedOption=state.selectedOptionIdx;st.answered=true;st.isCorrect=isCorrect;st.chosenIdxs=chosenIdxs;
+  if(isCorrect)state.correctCount++;else state.wrongCount++;
+  const p=loadProgress(),key=qid(q.sectionName,q.num);
+  p.attempted=p.attempted||{};p.mistakes=p.mistakes||{};p.attempted[key]=isCorrect?'correct':'wrong';
+  if(isCorrect)delete p.mistakes[key];else p.mistakes[key]=true;
+  saveProgress(p);
+  if(!isCorrect)state.sessionMistakes.push({q,chosenIdxs});
+  renderQuestion();
+}
+function previousQuestion(){if(state.currentIndex>0){state.currentIndex--;renderQuestion();}}
+
+function showResults(){
+  stopTimer();document.getElementById('screen-quiz').classList.remove('active');
+  document.getElementById('screen-results').classList.add('active');document.getElementById('mistakes-list-wrap').classList.add('hidden');
+  const total=state.quizQuestions.length,pct=total?Math.round((state.correctCount/total)*100):0;
+  document.getElementById('result-pct').textContent=pct+'%';document.getElementById('score-circle').style.setProperty('--pct',pct);
+  document.getElementById('res-total').textContent=total;document.getElementById('res-correct').textContent=state.correctCount;document.getElementById('res-wrong').textContent=state.wrongCount;
+  document.getElementById('btn-show-mistakes').classList.toggle('hidden',state.sessionMistakes.length===0);
+}
+
+function showMistakesList(){
+  const wrap=document.getElementById('mistakes-list-wrap'),list=document.getElementById('mistakes-list');list.innerHTML='';
+  state.sessionMistakes.forEach(m=>{
+    const q=m.q;let yourAnswers='',correctAnswers='';
+    if(isTFQuestion(q)){
+      yourAnswers=m.chosenIdxs.length?m.chosenIdxs.map(i=>i===0?'True (صواب)':'False (خطأ)').join('، '):'لم تُجب (انتهى الوقت)';
+      correctAnswers=(q.options.find(o=>o.correct)||{}).en==='True'?'True (صواب)':'False (خطأ)';
+    }else{
+      yourAnswers=m.chosenIdxs.length?m.chosenIdxs.map(i=>q.options[i].en).join('، '):'لم تُجب (انتهى الوقت)';
+      correctAnswers=q.options.map(o=>o.correct?o.en:null).filter(Boolean).join('، ');
+    }
+    const div=document.createElement('div');div.className='mistake-item';
+    const toggleBtn=document.createElement('button');toggleBtn.className='mistake-toggle';toggleBtn.innerHTML='<i class="fas fa-eye"></i> عرض السؤال';
+    const detailDiv=document.createElement('div');detailDiv.className='mistake-detail';detailDiv.style.display='none';
+    const qHeader=document.createElement('div');qHeader.style.fontWeight='bold';qHeader.style.marginBottom='8px';qHeader.textContent=`${q.num}. ${q.en}`;detailDiv.appendChild(qHeader);
+    if(q.ar){const qArH=document.createElement('div');qArH.style.color='var(--muted)';qArH.style.marginBottom='8px';qArH.style.direction='rtl';qArH.style.textAlign='right';qArH.textContent=q.ar;detailDiv.appendChild(qArH);}
+    const optsDiv=document.createElement('div');
+    q.options.forEach((opt,i)=>{
+      const row=document.createElement('div');row.className='opt-row';
+      const label=document.createElement('span');label.className='opt-label';label.textContent=opt.en+(opt.ar?' — '+opt.ar:'');
+      const status=document.createElement('span');status.className='opt-status';
+      if(opt.correct){status.textContent='✅';status.style.color='var(--success)';}
+      else if(m.chosenIdxs.includes(i)){status.textContent='❌';status.style.color='var(--danger)';}
+      else{status.textContent='—';status.style.color='var(--muted)';}
+      row.appendChild(label);row.appendChild(status);optsDiv.appendChild(row);
+    });
+    detailDiv.appendChild(optsDiv);
+    const explainDiv=document.createElement('div');explainDiv.style.marginTop='8px';explainDiv.style.fontStyle='italic';explainDiv.style.color='var(--muted)';explainDiv.style.direction='rtl';explainDiv.style.textAlign='right';explainDiv.textContent=`💡 ${q.explain_ar||''}`;detailDiv.appendChild(explainDiv);
+    toggleBtn.onclick=()=>{const vis=detailDiv.style.display!=='none';detailDiv.style.display=vis?'none':'block';toggleBtn.innerHTML=vis?'<i class="fas fa-eye"></i> عرض السؤال':'<i class="fas fa-eye-slash"></i> إخفاء السؤال';};
+    div.innerHTML=`<div class="m-q">${q.num}. ${q.en}</div><div class="m-you">إجابتك: ${yourAnswers}</div><div class="m-correct">الصح: ${correctAnswers}</div>`;
+    div.appendChild(toggleBtn);div.appendChild(detailDiv);list.appendChild(div);
+  });
+  wrap.classList.remove('hidden');wrap.scrollIntoView({behavior:'smooth'});
+}
+
+function stopTimer(){if(state.timerInterval){clearInterval(state.timerInterval);state.timerInterval=null;}const b=document.getElementById('timer-badge');b.classList.add('hidden');b.classList.remove('warn','danger');}
+function startTimer(){stopTimer();if(!state.timerSeconds||state.timerSeconds<=0)return;const badge=document.getElementById('timer-badge');state.timeLeft=state.timerSeconds;badge.classList.remove('hidden','warn','danger');badge.innerHTML=`<i class="fas fa-hourglass-half"></i> ${state.timeLeft}`;state.timerInterval=setInterval(()=>{state.timeLeft--;if(state.timeLeft<=0){badge.innerHTML=`<i class="fas fa-hourglass-end"></i> 0`;stopTimer();onTimeUp();return;}badge.innerHTML=`<i class="fas fa-hourglass-half"></i> ${state.timeLeft}`;badge.classList.toggle('warn',state.timeLeft<=3&&state.timeLeft>1);badge.classList.toggle('danger',state.timeLeft<=1);},1000);}
+function onTimeUp(){if(state.answered)return;finalizeAnswer(false,state.selectedOptionIdx!==null?[state.selectedOptionIdx]:[]);}
+
+function getMaleEnglishVoice(){if(maleEnglishVoice)return maleEnglishVoice;const voices=window.speechSynthesis.getVoices();let v=voices.find(v=>v.lang==='en-US'&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang==='en-GB'&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang.startsWith('en')&&v.name.toLowerCase().includes('male'))||voices.find(v=>v.lang.startsWith('en'));maleEnglishVoice=v;return v;}
+function speakWord(word){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(word);u.lang='en-US';u.rate=.7;u.pitch=1;u.volume=1;const v=getMaleEnglishVoice();if(v)u.voice=v;window.speechSynthesis.speak(u);}
+
+function wrapEnglishText(text,container){
+  if(!container)return;container.innerHTML='';if(!text)return;
+  const tempDiv=document.createElement('div');tempDiv.innerHTML=text;
+  function processNodes(node,target){
+    node.childNodes.forEach(child=>{
+      if(child.nodeType===Node.TEXT_NODE){
+        const words=child.textContent.split(' ');
+        words.forEach((word,idx)=>{
+          if(word.trim()===''){target.appendChild(document.createTextNode(' '));return;}
+          const span=document.createElement('span');span.className='word-en';span.textContent=word;
+          let pressTimer=null;
+          const startPress=()=>{pressTimer=setTimeout(()=>{speakWord(word.replace(/[^a-zA-Z]/g,''));span.classList.add('speaking');setTimeout(()=>span.classList.remove('speaking'),600);const hint=document.getElementById('speech-hint');hint.textContent=`🔊 ${word}`;hint.classList.add('show');setTimeout(()=>hint.classList.remove('show'),900);},800);};
+          const endPress=()=>{if(pressTimer){clearTimeout(pressTimer);pressTimer=null;}};
+          span.addEventListener('pointerdown',startPress);span.addEventListener('pointerup',endPress);span.addEventListener('pointerleave',endPress);
+          span.addEventListener('touchstart',startPress,{passive:true});span.addEventListener('touchend',endPress,{passive:true});
+          target.appendChild(span);
+          if(idx<words.length-1)target.appendChild(document.createTextNode(' '));
+        });
+      }else if(child.nodeType===Node.ELEMENT_NODE){
+        const clone=child.cloneNode(false);target.appendChild(clone);processNodes(child,clone);
+      }
+    });
+  }
+  processNodes(tempDiv,container);
+}
+
+document.addEventListener('click',function(e){const btn=e.target.closest('.big-btn');if(!btn)return;const rect=btn.getBoundingClientRect();const ripple=document.createElement('span');ripple.className='ripple';const size=Math.max(rect.width,rect.height);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';btn.appendChild(ripple);setTimeout(()=>ripple.remove(),500);});
+
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',enterApp);}else{enterApp();}
+</script>
+</body>
+</html>
